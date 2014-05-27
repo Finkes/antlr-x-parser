@@ -24,7 +24,7 @@ public class XTest {
 		try
 		{
 			//load testfile from folder
-			FileInputStream fileInputStream = new FileInputStream(new File("x/Test6.x"));
+			FileInputStream fileInputStream = new FileInputStream(new File("x/Test8.x"));
 			
 			//create ANTLR input stream
 			ANTLRInputStream inputStream = new ANTLRInputStream(fileInputStream);
