@@ -1,0 +1,160 @@
+digraph {
+
+	ordering=out;
+	ranksep=.4;
+	bgcolor="lightgrey"; node [shape=box, fixedsize=false, fontsize=12, fontname="Helvetica-bold", fontcolor="blue"
+		width=.25, height=.25, color="black", fillcolor="white", style="filled, solid, bold"];
+	edge [arrowsize=.5, color="black", style="bold"]
+
+  n0 [label="program"];
+  n1 [label="Test7"];
+  n2 [label="DECLARE"];
+  n2 [label="DECLARE"];
+  n3 [label="read"];
+  n4 [label="x"];
+  n5 [label="int"];
+  n6 [label="DECLARE"];
+  n6 [label="DECLARE"];
+  n7 [label="print"];
+  n8 [label="y"];
+  n9 [label="float"];
+  n10 [label="DECLARE"];
+  n10 [label="DECLARE"];
+  n11 [label="print"];
+  n12 [label="z1"];
+  n13 [label="float"];
+  n14 [label="DECLARE"];
+  n14 [label="DECLARE"];
+  n15 [label="print"];
+  n16 [label="z2"];
+  n17 [label="float"];
+  n18 [label="DECLARE"];
+  n18 [label="DECLARE"];
+  n19 [label="print"];
+  n20 [label="z3"];
+  n21 [label="float"];
+  n22 [label="DECLARE"];
+  n22 [label="DECLARE"];
+  n23 [label="i"];
+  n24 [label="int"];
+  n25 [label="BLOCK"];
+  n25 [label="BLOCK"];
+  n26 [label="ASSIGN"];
+  n26 [label="ASSIGN"];
+  n27 [label="x"];
+  n28 [label="+"];
+  n28 [label="+"];
+  n29 [label="3"];
+  n30 [label="4"];
+  n31 [label="ASSIGN"];
+  n31 [label="ASSIGN"];
+  n32 [label="y"];
+  n33 [label="+"];
+  n33 [label="+"];
+  n34 [label="x"];
+  n35 [label="2"];
+  n36 [label="ASSIGN"];
+  n36 [label="ASSIGN"];
+  n37 [label="y"];
+  n38 [label="*"];
+  n38 [label="*"];
+  n39 [label="2"];
+  n40 [label="y"];
+  n41 [label="for"];
+  n41 [label="for"];
+  n42 [label="ASSIGN"];
+  n42 [label="ASSIGN"];
+  n43 [label="i"];
+  n44 [label="x"];
+  n45 [label="i"];
+  n46 [label="<"];
+  n47 [label="20"];
+  n48 [label="ASSIGN"];
+  n48 [label="ASSIGN"];
+  n49 [label="i"];
+  n50 [label="+"];
+  n50 [label="+"];
+  n51 [label="i"];
+  n52 [label="1"];
+  n53 [label="BLOCK"];
+  n53 [label="BLOCK"];
+  n54 [label="ASSIGN"];
+  n54 [label="ASSIGN"];
+  n55 [label="z1"];
+  n56 [label="+"];
+  n56 [label="+"];
+  n57 [label="y"];
+  n58 [label="1"];
+  n59 [label="ASSIGN"];
+  n59 [label="ASSIGN"];
+  n60 [label="z2"];
+  n61 [label="+"];
+  n61 [label="+"];
+  n62 [label="x"];
+  n63 [label="3"];
+
+  n0 -> n1 // "program" -> "Test7"
+  n0 -> n2 // "program" -> "DECLARE"
+  n2 -> n3 // "DECLARE" -> "read"
+  n2 -> n4 // "DECLARE" -> "x"
+  n2 -> n5 // "DECLARE" -> "int"
+  n0 -> n6 // "program" -> "DECLARE"
+  n6 -> n7 // "DECLARE" -> "print"
+  n6 -> n8 // "DECLARE" -> "y"
+  n6 -> n9 // "DECLARE" -> "float"
+  n0 -> n10 // "program" -> "DECLARE"
+  n10 -> n11 // "DECLARE" -> "print"
+  n10 -> n12 // "DECLARE" -> "z1"
+  n10 -> n13 // "DECLARE" -> "float"
+  n0 -> n14 // "program" -> "DECLARE"
+  n14 -> n15 // "DECLARE" -> "print"
+  n14 -> n16 // "DECLARE" -> "z2"
+  n14 -> n17 // "DECLARE" -> "float"
+  n0 -> n18 // "program" -> "DECLARE"
+  n18 -> n19 // "DECLARE" -> "print"
+  n18 -> n20 // "DECLARE" -> "z3"
+  n18 -> n21 // "DECLARE" -> "float"
+  n0 -> n22 // "program" -> "DECLARE"
+  n22 -> n23 // "DECLARE" -> "i"
+  n22 -> n24 // "DECLARE" -> "int"
+  n0 -> n25 // "program" -> "BLOCK"
+  n25 -> n26 // "BLOCK" -> "ASSIGN"
+  n26 -> n27 // "ASSIGN" -> "x"
+  n26 -> n28 // "ASSIGN" -> "+"
+  n28 -> n29 // "+" -> "3"
+  n28 -> n30 // "+" -> "4"
+  n25 -> n31 // "BLOCK" -> "ASSIGN"
+  n31 -> n32 // "ASSIGN" -> "y"
+  n31 -> n33 // "ASSIGN" -> "+"
+  n33 -> n34 // "+" -> "x"
+  n33 -> n35 // "+" -> "2"
+  n25 -> n36 // "BLOCK" -> "ASSIGN"
+  n36 -> n37 // "ASSIGN" -> "y"
+  n36 -> n38 // "ASSIGN" -> "*"
+  n38 -> n39 // "*" -> "2"
+  n38 -> n40 // "*" -> "y"
+  n25 -> n41 // "BLOCK" -> "for"
+  n41 -> n42 // "for" -> "ASSIGN"
+  n42 -> n43 // "ASSIGN" -> "i"
+  n42 -> n44 // "ASSIGN" -> "x"
+  n41 -> n45 // "for" -> "i"
+  n41 -> n46 // "for" -> "<"
+  n41 -> n47 // "for" -> "20"
+  n41 -> n48 // "for" -> "ASSIGN"
+  n48 -> n49 // "ASSIGN" -> "i"
+  n48 -> n50 // "ASSIGN" -> "+"
+  n50 -> n51 // "+" -> "i"
+  n50 -> n52 // "+" -> "1"
+  n41 -> n53 // "for" -> "BLOCK"
+  n53 -> n54 // "BLOCK" -> "ASSIGN"
+  n54 -> n55 // "ASSIGN" -> "z1"
+  n54 -> n56 // "ASSIGN" -> "+"
+  n56 -> n57 // "+" -> "y"
+  n56 -> n58 // "+" -> "1"
+  n25 -> n59 // "BLOCK" -> "ASSIGN"
+  n59 -> n60 // "ASSIGN" -> "z2"
+  n59 -> n61 // "ASSIGN" -> "+"
+  n61 -> n62 // "+" -> "x"
+  n61 -> n63 // "+" -> "3"
+
+}
