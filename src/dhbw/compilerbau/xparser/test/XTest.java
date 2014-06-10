@@ -9,11 +9,13 @@ import javax.xml.bind.annotation.XmlList;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.CommonTree;
+import org.antlr.runtime.tree.CommonTreeNodeStream;
 import org.antlr.runtime.tree.DOTTreeGenerator;
 
 import dhbw.compilerbau.xparser.XLexer;
 import dhbw.compilerbau.xparser.XParser;
 import dhbw.compilerbau.xparser.XParser.program_return;
+import dhbw.compilerbau.xparser.X_Reference_Counter;
 
 
 
@@ -50,6 +52,18 @@ public class XTest {
 			PrintWriter writer = new PrintWriter(new File("graphviz/graph"));
         	
         	writer.write(genarator.toDOT(tree).toString());
+        	
+        	writer.close();
+        	
+        	
+        	//reference counter
+        	X_Reference_Counter reference_counter = new X_Reference_Counter(new CommonTreeNodeStream(tree));
+        	
+        	CommonTree reference_counter_tree = reference_counter.program().getTree();
+        	
+        	writer = new PrintWriter(new File("graphviz/graph_reference_counter"));
+        	
+        	writer.write(genarator.toDOT(reference_counter_tree).toString());
         	
         	writer.close();
 			

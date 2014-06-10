@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-01 15:44:51
+// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-10 10:36:54
 package dhbw.compilerbau.xparser; 
 
 import org.antlr.runtime.*;
@@ -538,7 +538,7 @@ public class XLexer extends Lexer {
 		try {
 			int _type = TYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:5: ( 'int' | 'float' | 'string' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:58:5: ( 'int' | 'float' | 'string' )
 			int alt1=3;
 			switch ( input.LA(1) ) {
 			case 'i':
@@ -563,21 +563,21 @@ public class XLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:17: 'int'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:58:17: 'int'
 					{
 					match("int"); 
 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:25: 'float'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:58:25: 'float'
 					{
 					match("float"); 
 
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:35: 'string'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:58:35: 'string'
 					{
 					match("string"); 
 
@@ -599,12 +599,12 @@ public class XLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:39:3: ( LETTER ( LETTER | DIGIT )* )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:39:19: LETTER ( LETTER | DIGIT )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:59:3: ( LETTER ( LETTER | DIGIT )* )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:59:19: LETTER ( LETTER | DIGIT )*
 			{
 			mLETTER(); 
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:39:26: ( LETTER | DIGIT )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:59:26: ( LETTER | DIGIT )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -647,7 +647,7 @@ public class XLexer extends Lexer {
 	// $ANTLR start "DIGIT"
 	public final void mDIGIT() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:40:15: ( '0' .. '9' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:60:15: ( '0' .. '9' )
 			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
@@ -670,7 +670,7 @@ public class XLexer extends Lexer {
 	// $ANTLR start "LETTER"
 	public final void mLETTER() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:41:16: ( 'a' .. 'z' | 'A' .. 'Z' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:61:16: ( 'a' .. 'z' | 'A' .. 'Z' )
 			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
@@ -693,7 +693,7 @@ public class XLexer extends Lexer {
 	// $ANTLR start "NUMBER"
 	public final void mNUMBER() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:16: ( '0' | ( '1' .. '9' ( DIGIT )* ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:62:16: ( '0' | ( '1' .. '9' ( DIGIT )* ) )
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='0') ) {
@@ -711,19 +711,19 @@ public class XLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:19: '0'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:62:19: '0'
 					{
 					match('0'); 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:24: ( '1' .. '9' ( DIGIT )* )
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:62:24: ( '1' .. '9' ( DIGIT )* )
 					{
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:24: ( '1' .. '9' ( DIGIT )* )
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:25: '1' .. '9' ( DIGIT )*
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:62:24: ( '1' .. '9' ( DIGIT )* )
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:62:25: '1' .. '9' ( DIGIT )*
 					{
 					matchRange('1','9'); 
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:34: ( DIGIT )*
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:62:34: ( DIGIT )*
 					loop3:
 					while (true) {
 						int alt3=2;
@@ -770,10 +770,10 @@ public class XLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:43:4: ( ( '-' )? NUMBER )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:43:19: ( '-' )? NUMBER
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:63:4: ( ( '-' )? NUMBER )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:63:19: ( '-' )? NUMBER
 			{
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:43:19: ( '-' )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:63:19: ( '-' )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='-') ) {
@@ -781,7 +781,7 @@ public class XLexer extends Lexer {
 			}
 			switch (alt5) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:43:19: '-'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:63:19: '-'
 					{
 					match('-'); 
 					}
@@ -807,12 +807,12 @@ public class XLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:6: ( INT ( '.' ( DIGIT )* )? ( ( 'e' | 'E' ) ( '-' )? NUMBER )? )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:19: INT ( '.' ( DIGIT )* )? ( ( 'e' | 'E' ) ( '-' )? NUMBER )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:6: ( INT ( '.' ( DIGIT )* )? ( ( 'e' | 'E' ) ( '-' )? NUMBER )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:19: INT ( '.' ( DIGIT )* )? ( ( 'e' | 'E' ) ( '-' )? NUMBER )?
 			{
 			mINT(); 
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:23: ( '.' ( DIGIT )* )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:23: ( '.' ( DIGIT )* )?
 			int alt7=2;
 			int LA7_0 = input.LA(1);
 			if ( (LA7_0=='.') ) {
@@ -820,10 +820,10 @@ public class XLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:24: '.' ( DIGIT )*
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:24: '.' ( DIGIT )*
 					{
 					match('.'); 
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:28: ( DIGIT )*
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:28: ( DIGIT )*
 					loop6:
 					while (true) {
 						int alt6=2;
@@ -857,7 +857,7 @@ public class XLexer extends Lexer {
 
 			}
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:38: ( ( 'e' | 'E' ) ( '-' )? NUMBER )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:38: ( ( 'e' | 'E' ) ( '-' )? NUMBER )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='E'||LA9_0=='e') ) {
@@ -865,7 +865,7 @@ public class XLexer extends Lexer {
 			}
 			switch (alt9) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:39: ( 'e' | 'E' ) ( '-' )? NUMBER
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:39: ( 'e' | 'E' ) ( '-' )? NUMBER
 					{
 					if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 						input.consume();
@@ -875,7 +875,7 @@ public class XLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:49: ( '-' )?
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:49: ( '-' )?
 					int alt8=2;
 					int LA8_0 = input.LA(1);
 					if ( (LA8_0=='-') ) {
@@ -883,7 +883,7 @@ public class XLexer extends Lexer {
 					}
 					switch (alt8) {
 						case 1 :
-							// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:49: '-'
+							// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:64:49: '-'
 							{
 							match('-'); 
 							}
@@ -914,11 +914,11 @@ public class XLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:45:7: ( '\"' ( LETTER | DIGIT | OTHER )* '\"' )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:45:19: '\"' ( LETTER | DIGIT | OTHER )* '\"'
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:65:7: ( '\"' ( LETTER | DIGIT | OTHER )* '\"' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:65:19: '\"' ( LETTER | DIGIT | OTHER )* '\"'
 			{
 			match('\"'); 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:45:23: ( LETTER | DIGIT | OTHER )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:65:23: ( LETTER | DIGIT | OTHER )*
 			loop10:
 			while (true) {
 				int alt10=2;
@@ -969,7 +969,7 @@ public class XLexer extends Lexer {
 	// $ANTLR start "OTHER"
 	public final void mOTHER() throws RecognitionException {
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:46:15: ( ' ' | '.' | ':' | '\"' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:66:15: ( ' ' | '.' | ':' | '\"' )
 			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:
 			{
 			if ( input.LA(1)==' '||input.LA(1)=='\"'||input.LA(1)=='.'||input.LA(1)==':' ) {
@@ -994,10 +994,10 @@ public class XLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:47:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:47:19: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:67:3: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:67:19: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:47:19: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:67:19: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt11=0;
 			loop11:
 			while (true) {

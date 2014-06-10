@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-01 15:44:50
+// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-10 10:36:53
 package dhbw.compilerbau.xparser; 
 
 import org.antlr.runtime.*;
@@ -150,7 +150,7 @@ public class XParser extends Parser {
 			stream_EOF.add(EOF7);
 
 			// AST REWRITE
-			// elements: block, ID, 37, decllist
+			// elements: 37, ID, block, decllist
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -160,14 +160,14 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 15:58: -> ^( 'program' ID ( decllist )* block )
+			// 16:17: -> ^( 'program' ID ( decllist )* block )
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:15:61: ^( 'program' ID ( decllist )* block )
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:20: ^( 'program' ID ( decllist )* block )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot(stream_37.nextNode(), root_1);
 				adaptor.addChild(root_1, stream_ID.nextNode());
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:15:76: ( decllist )*
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:35: ( decllist )*
 				while ( stream_decllist.hasNext() ) {
 					adaptor.addChild(root_1, stream_decllist.nextTree());
 				}
@@ -211,7 +211,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "decllist"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:1: decllist : ( decl )* -> ( ^( DECLARE decl ) )* ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:1: decllist : ( decl )* -> ( ^( DECLARE decl ) )* ;
 	public final XParser.decllist_return decllist() throws RecognitionException {
 		XParser.decllist_return retval = new XParser.decllist_return();
 		retval.start = input.LT(1);
@@ -223,10 +223,10 @@ public class XParser extends Parser {
 		RewriteRuleSubtreeStream stream_decl=new RewriteRuleSubtreeStream(adaptor,"rule decl");
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:9: ( ( decl )* -> ( ^( DECLARE decl ) )* )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:17: ( decl )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:9: ( ( decl )* -> ( ^( DECLARE decl ) )* )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:17: ( decl )*
 			{
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:17: ( decl )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:17: ( decl )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -237,9 +237,9 @@ public class XParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:17: decl
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:17: decl
 					{
-					pushFollow(FOLLOW_decl_in_decllist105);
+					pushFollow(FOLLOW_decl_in_decllist123);
 					decl8=decl();
 					state._fsp--;
 
@@ -263,11 +263,11 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 16:53: -> ( ^( DECLARE decl ) )*
+			// 19:17: -> ( ^( DECLARE decl ) )*
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:62: ( ^( DECLARE decl ) )*
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:19:20: ( ^( DECLARE decl ) )*
 				while ( stream_decl.hasNext() ) {
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:16:62: ^( DECLARE decl )
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:19:20: ^( DECLARE decl )
 					{
 					Object root_1 = (Object)adaptor.nil();
 					root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(DECLARE, "DECLARE"), root_1);
@@ -312,7 +312,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "block"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:17:1: block : 'begin' statlist 'end' -> ^( BLOCK ( statlist )* ) ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:1: block : 'begin' statlist 'end' -> ^( BLOCK statlist ) ;
 	public final XParser.block_return block() throws RecognitionException {
 		XParser.block_return retval = new XParser.block_return();
 		retval.start = input.LT(1);
@@ -330,18 +330,18 @@ public class XParser extends Parser {
 		RewriteRuleSubtreeStream stream_statlist=new RewriteRuleSubtreeStream(adaptor,"rule statlist");
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:17:6: ( 'begin' statlist 'end' -> ^( BLOCK ( statlist )* ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:17:17: 'begin' statlist 'end'
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:6: ( 'begin' statlist 'end' -> ^( BLOCK statlist ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:17: 'begin' statlist 'end'
 			{
-			string_literal9=(Token)match(input,31,FOLLOW_31_in_block175);  
+			string_literal9=(Token)match(input,31,FOLLOW_31_in_block221);  
 			stream_31.add(string_literal9);
 
-			pushFollow(FOLLOW_statlist_in_block177);
+			pushFollow(FOLLOW_statlist_in_block223);
 			statlist10=statlist();
 			state._fsp--;
 
 			stream_statlist.add(statlist10.getTree());
-			string_literal11=(Token)match(input,33,FOLLOW_33_in_block179);  
+			string_literal11=(Token)match(input,33,FOLLOW_33_in_block225);  
 			stream_33.add(string_literal11);
 
 			// AST REWRITE
@@ -355,18 +355,13 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 17:40: -> ^( BLOCK ( statlist )* )
+			// 22:17: -> ^( BLOCK statlist )
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:17:43: ^( BLOCK ( statlist )* )
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:22:20: ^( BLOCK statlist )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(BLOCK, "BLOCK"), root_1);
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:17:51: ( statlist )*
-				while ( stream_statlist.hasNext() ) {
-					adaptor.addChild(root_1, stream_statlist.nextTree());
-				}
-				stream_statlist.reset();
-
+				adaptor.addChild(root_1, stream_statlist.nextTree());
 				adaptor.addChild(root_0, root_1);
 				}
 
@@ -404,7 +399,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "statlist"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:1: statlist : ( statswithsemi )* ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:1: statlist : ( statswithsemi )* ;
 	public final XParser.statlist_return statlist() throws RecognitionException {
 		XParser.statlist_return retval = new XParser.statlist_return();
 		retval.start = input.LT(1);
@@ -415,13 +410,13 @@ public class XParser extends Parser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:9: ( ( statswithsemi )* )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:17: ( statswithsemi )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:9: ( ( statswithsemi )* )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:17: ( statswithsemi )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:17: ( statswithsemi )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:17: ( statswithsemi )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -432,9 +427,9 @@ public class XParser extends Parser {
 
 				switch (alt2) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:18:17: statswithsemi
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:17: statswithsemi
 					{
-					pushFollow(FOLLOW_statswithsemi_in_statlist200);
+					pushFollow(FOLLOW_statswithsemi_in_statlist279);
 					statswithsemi12=statswithsemi();
 					state._fsp--;
 
@@ -477,7 +472,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "statswithsemi"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:19:1: statswithsemi : stat ';' !;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:1: statswithsemi : stat ';' !;
 	public final XParser.statswithsemi_return statswithsemi() throws RecognitionException {
 		XParser.statswithsemi_return retval = new XParser.statswithsemi_return();
 		retval.start = input.LT(1);
@@ -490,19 +485,19 @@ public class XParser extends Parser {
 		Object char_literal14_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:19:14: ( stat ';' !)
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:19:17: stat ';' !
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:14: ( stat ';' !)
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:17: stat ';' !
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_stat_in_statswithsemi208);
+			pushFollow(FOLLOW_stat_in_statswithsemi288);
 			stat13=stat();
 			state._fsp--;
 
 			adaptor.addChild(root_0, stat13.getTree());
 
-			char_literal14=(Token)match(input,27,FOLLOW_27_in_statswithsemi210); 
+			char_literal14=(Token)match(input,27,FOLLOW_27_in_statswithsemi290); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -532,7 +527,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "stat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:1: stat : ( assignstat | condstat | whilestat | forstat | block );
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:1: stat : ( assignstat | condstat | whilestat | forstat | block );
 	public final XParser.stat_return stat() throws RecognitionException {
 		XParser.stat_return retval = new XParser.stat_return();
 		retval.start = input.LT(1);
@@ -547,7 +542,7 @@ public class XParser extends Parser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:5: ( assignstat | condstat | whilestat | forstat | block )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:5: ( assignstat | condstat | whilestat | forstat | block )
 			int alt3=5;
 			switch ( input.LA(1) ) {
 			case ID:
@@ -582,12 +577,12 @@ public class XParser extends Parser {
 			}
 			switch (alt3) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:17: assignstat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:17: assignstat
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_assignstat_in_stat228);
+					pushFollow(FOLLOW_assignstat_in_stat309);
 					assignstat15=assignstat();
 					state._fsp--;
 
@@ -596,12 +591,12 @@ public class XParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:30: condstat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:30: condstat
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_condstat_in_stat232);
+					pushFollow(FOLLOW_condstat_in_stat313);
 					condstat16=condstat();
 					state._fsp--;
 
@@ -610,12 +605,12 @@ public class XParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:41: whilestat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:41: whilestat
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_whilestat_in_stat236);
+					pushFollow(FOLLOW_whilestat_in_stat317);
 					whilestat17=whilestat();
 					state._fsp--;
 
@@ -624,12 +619,12 @@ public class XParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:53: forstat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:53: forstat
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_forstat_in_stat240);
+					pushFollow(FOLLOW_forstat_in_stat321);
 					forstat18=forstat();
 					state._fsp--;
 
@@ -638,12 +633,12 @@ public class XParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:20:63: block
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:63: block
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_block_in_stat244);
+					pushFollow(FOLLOW_block_in_stat325);
 					block19=block();
 					state._fsp--;
 
@@ -680,7 +675,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "cond"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:1: cond : expr comparator expr -> ^( comparator expr expr ) ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:30:1: cond : expr comparator expr -> ^( comparator expr expr ) ;
 	public final XParser.cond_return cond() throws RecognitionException {
 		XParser.cond_return retval = new XParser.cond_return();
 		retval.start = input.LT(1);
@@ -695,26 +690,26 @@ public class XParser extends Parser {
 		RewriteRuleSubtreeStream stream_comparator=new RewriteRuleSubtreeStream(adaptor,"rule comparator");
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:5: ( expr comparator expr -> ^( comparator expr expr ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:17: expr comparator expr
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:30:5: ( expr comparator expr -> ^( comparator expr expr ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:30:17: expr comparator expr
 			{
-			pushFollow(FOLLOW_expr_in_cond261);
+			pushFollow(FOLLOW_expr_in_cond343);
 			expr20=expr();
 			state._fsp--;
 
 			stream_expr.add(expr20.getTree());
-			pushFollow(FOLLOW_comparator_in_cond263);
+			pushFollow(FOLLOW_comparator_in_cond345);
 			comparator21=comparator();
 			state._fsp--;
 
 			stream_comparator.add(comparator21.getTree());
-			pushFollow(FOLLOW_expr_in_cond265);
+			pushFollow(FOLLOW_expr_in_cond347);
 			expr22=expr();
 			state._fsp--;
 
 			stream_expr.add(expr22.getTree());
 			// AST REWRITE
-			// elements: expr, expr, comparator
+			// elements: expr, comparator, expr
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -724,9 +719,9 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 21:38: -> ^( comparator expr expr )
+			// 31:17: -> ^( comparator expr expr )
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:21:41: ^( comparator expr expr )
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:31:20: ^( comparator expr expr )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot(stream_comparator.nextNode(), root_1);
@@ -769,7 +764,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "condstat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:22:1: condstat : 'if' ^ cond 'then' ! stat ( options {greedy=true; } : 'else' ! stat )? ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:33:1: condstat : 'if' ^ cond 'then' ! stat ( options {greedy=true; } : 'else' ! stat )? ;
 	public final XParser.condstat_return condstat() throws RecognitionException {
 		XParser.condstat_return retval = new XParser.condstat_return();
 		retval.start = input.LT(1);
@@ -788,30 +783,30 @@ public class XParser extends Parser {
 		Object string_literal27_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:22:9: ( 'if' ^ cond 'then' ! stat ( options {greedy=true; } : 'else' ! stat )? )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:22:17: 'if' ^ cond 'then' ! stat ( options {greedy=true; } : 'else' ! stat )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:33:9: ( 'if' ^ cond 'then' ! stat ( options {greedy=true; } : 'else' ! stat )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:33:17: 'if' ^ cond 'then' ! stat ( options {greedy=true; } : 'else' ! stat )?
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			string_literal23=(Token)match(input,35,FOLLOW_35_in_condstat288); 
+			string_literal23=(Token)match(input,35,FOLLOW_35_in_condstat404); 
 			string_literal23_tree = (Object)adaptor.create(string_literal23);
 			root_0 = (Object)adaptor.becomeRoot(string_literal23_tree, root_0);
 
-			pushFollow(FOLLOW_cond_in_condstat291);
+			pushFollow(FOLLOW_cond_in_condstat407);
 			cond24=cond();
 			state._fsp--;
 
 			adaptor.addChild(root_0, cond24.getTree());
 
-			string_literal25=(Token)match(input,39,FOLLOW_39_in_condstat293); 
-			pushFollow(FOLLOW_stat_in_condstat296);
+			string_literal25=(Token)match(input,39,FOLLOW_39_in_condstat409); 
+			pushFollow(FOLLOW_stat_in_condstat412);
 			stat26=stat();
 			state._fsp--;
 
 			adaptor.addChild(root_0, stat26.getTree());
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:22:41: ( options {greedy=true; } : 'else' ! stat )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:33:41: ( options {greedy=true; } : 'else' ! stat )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0==32) ) {
@@ -819,10 +814,10 @@ public class XParser extends Parser {
 			}
 			switch (alt4) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:22:64: 'else' ! stat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:33:64: 'else' ! stat
 					{
-					string_literal27=(Token)match(input,32,FOLLOW_32_in_condstat306); 
-					pushFollow(FOLLOW_stat_in_condstat309);
+					string_literal27=(Token)match(input,32,FOLLOW_32_in_condstat422); 
+					pushFollow(FOLLOW_stat_in_condstat425);
 					stat28=stat();
 					state._fsp--;
 
@@ -862,7 +857,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "whilestat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:23:1: whilestat : 'while' '(' cond ')' stat -> ^( 'while' cond stat ) ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:1: whilestat : 'while' '(' cond ')' stat -> ^( 'while' cond stat ) ;
 	public final XParser.whilestat_return whilestat() throws RecognitionException {
 		XParser.whilestat_return retval = new XParser.whilestat_return();
 		retval.start = input.LT(1);
@@ -885,30 +880,30 @@ public class XParser extends Parser {
 		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:23:10: ( 'while' '(' cond ')' stat -> ^( 'while' cond stat ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:23:17: 'while' '(' cond ')' stat
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:10: ( 'while' '(' cond ')' stat -> ^( 'while' cond stat ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:17: 'while' '(' cond ')' stat
 			{
-			string_literal29=(Token)match(input,40,FOLLOW_40_in_whilestat323);  
+			string_literal29=(Token)match(input,40,FOLLOW_40_in_whilestat440);  
 			stream_40.add(string_literal29);
 
-			char_literal30=(Token)match(input,18,FOLLOW_18_in_whilestat325);  
+			char_literal30=(Token)match(input,18,FOLLOW_18_in_whilestat442);  
 			stream_18.add(char_literal30);
 
-			pushFollow(FOLLOW_cond_in_whilestat327);
+			pushFollow(FOLLOW_cond_in_whilestat444);
 			cond31=cond();
 			state._fsp--;
 
 			stream_cond.add(cond31.getTree());
-			char_literal32=(Token)match(input,19,FOLLOW_19_in_whilestat329);  
+			char_literal32=(Token)match(input,19,FOLLOW_19_in_whilestat446);  
 			stream_19.add(char_literal32);
 
-			pushFollow(FOLLOW_stat_in_whilestat331);
+			pushFollow(FOLLOW_stat_in_whilestat448);
 			stat33=stat();
 			state._fsp--;
 
 			stream_stat.add(stat33.getTree());
 			// AST REWRITE
-			// elements: stat, cond, 40
+			// elements: 40, stat, cond
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -918,9 +913,9 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 23:43: -> ^( 'while' cond stat )
+			// 36:17: -> ^( 'while' cond stat )
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:23:46: ^( 'while' cond stat )
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:36:20: ^( 'while' cond stat )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot(stream_40.nextNode(), root_1);
@@ -963,7 +958,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "forstat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:1: forstat : 'for' '(' assignstat ';' cond ';' assignstat ')' stat -> ^( 'for' assignstat cond assignstat stat ) ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:1: forstat : 'for' '(' assignstat ';' cond ';' assignstat ')' stat -> ^( 'for' assignstat cond assignstat stat ) ;
 	public final XParser.forstat_return forstat() throws RecognitionException {
 		XParser.forstat_return retval = new XParser.forstat_return();
 		retval.start = input.LT(1);
@@ -994,46 +989,46 @@ public class XParser extends Parser {
 		RewriteRuleSubtreeStream stream_stat=new RewriteRuleSubtreeStream(adaptor,"rule stat");
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:8: ( 'for' '(' assignstat ';' cond ';' assignstat ')' stat -> ^( 'for' assignstat cond assignstat stat ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:17: 'for' '(' assignstat ';' cond ';' assignstat ')' stat
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:8: ( 'for' '(' assignstat ';' cond ';' assignstat ')' stat -> ^( 'for' assignstat cond assignstat stat ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:38:17: 'for' '(' assignstat ';' cond ';' assignstat ')' stat
 			{
-			string_literal34=(Token)match(input,34,FOLLOW_34_in_forstat354);  
+			string_literal34=(Token)match(input,34,FOLLOW_34_in_forstat505);  
 			stream_34.add(string_literal34);
 
-			char_literal35=(Token)match(input,18,FOLLOW_18_in_forstat356);  
+			char_literal35=(Token)match(input,18,FOLLOW_18_in_forstat507);  
 			stream_18.add(char_literal35);
 
-			pushFollow(FOLLOW_assignstat_in_forstat358);
+			pushFollow(FOLLOW_assignstat_in_forstat509);
 			assignstat36=assignstat();
 			state._fsp--;
 
 			stream_assignstat.add(assignstat36.getTree());
-			char_literal37=(Token)match(input,27,FOLLOW_27_in_forstat360);  
+			char_literal37=(Token)match(input,27,FOLLOW_27_in_forstat511);  
 			stream_27.add(char_literal37);
 
-			pushFollow(FOLLOW_cond_in_forstat362);
+			pushFollow(FOLLOW_cond_in_forstat513);
 			cond38=cond();
 			state._fsp--;
 
 			stream_cond.add(cond38.getTree());
-			char_literal39=(Token)match(input,27,FOLLOW_27_in_forstat364);  
+			char_literal39=(Token)match(input,27,FOLLOW_27_in_forstat515);  
 			stream_27.add(char_literal39);
 
-			pushFollow(FOLLOW_assignstat_in_forstat366);
+			pushFollow(FOLLOW_assignstat_in_forstat517);
 			assignstat40=assignstat();
 			state._fsp--;
 
 			stream_assignstat.add(assignstat40.getTree());
-			char_literal41=(Token)match(input,19,FOLLOW_19_in_forstat368);  
+			char_literal41=(Token)match(input,19,FOLLOW_19_in_forstat519);  
 			stream_19.add(char_literal41);
 
-			pushFollow(FOLLOW_stat_in_forstat370);
+			pushFollow(FOLLOW_stat_in_forstat521);
 			stat42=stat();
 			state._fsp--;
 
 			stream_stat.add(stat42.getTree());
 			// AST REWRITE
-			// elements: 34, cond, stat, assignstat, assignstat
+			// elements: assignstat, assignstat, cond, 34, stat
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1043,9 +1038,9 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 24:71: -> ^( 'for' assignstat cond assignstat stat )
+			// 39:17: -> ^( 'for' assignstat cond assignstat stat )
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:24:74: ^( 'for' assignstat cond assignstat stat )
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:39:20: ^( 'for' assignstat cond assignstat stat )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot(stream_34.nextNode(), root_1);
@@ -1090,7 +1085,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "assignstat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:25:1: assignstat : ID ':=' expr -> ^( ASSIGN ID expr ) ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:41:1: assignstat : ID ':=' expr -> ^( ASSIGN ID expr ) ;
 	public final XParser.assignstat_return assignstat() throws RecognitionException {
 		XParser.assignstat_return retval = new XParser.assignstat_return();
 		retval.start = input.LT(1);
@@ -1108,22 +1103,22 @@ public class XParser extends Parser {
 		RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:25:11: ( ID ':=' expr -> ^( ASSIGN ID expr ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:25:17: ID ':=' expr
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:41:11: ( ID ':=' expr -> ^( ASSIGN ID expr ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:41:17: ID ':=' expr
 			{
-			ID43=(Token)match(input,ID,FOLLOW_ID_in_assignstat394);  
+			ID43=(Token)match(input,ID,FOLLOW_ID_in_assignstat579);  
 			stream_ID.add(ID43);
 
-			string_literal44=(Token)match(input,26,FOLLOW_26_in_assignstat396);  
+			string_literal44=(Token)match(input,26,FOLLOW_26_in_assignstat581);  
 			stream_26.add(string_literal44);
 
-			pushFollow(FOLLOW_expr_in_assignstat398);
+			pushFollow(FOLLOW_expr_in_assignstat583);
 			expr45=expr();
 			state._fsp--;
 
 			stream_expr.add(expr45.getTree());
 			// AST REWRITE
-			// elements: ID, expr
+			// elements: expr, ID
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1133,9 +1128,9 @@ public class XParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (Object)adaptor.nil();
-			// 25:30: -> ^( ASSIGN ID expr )
+			// 42:17: -> ^( ASSIGN ID expr )
 			{
-				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:25:33: ^( ASSIGN ID expr )
+				// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:42:20: ^( ASSIGN ID expr )
 				{
 				Object root_1 = (Object)adaptor.nil();
 				root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(ASSIGN, "ASSIGN"), root_1);
@@ -1178,7 +1173,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "expr"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:1: expr : expr2 ( addOperator ^ expr )? ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:1: expr : expr2 ( addOperator ^ expr )? ;
 	public final XParser.expr_return expr() throws RecognitionException {
 		XParser.expr_return retval = new XParser.expr_return();
 		retval.start = input.LT(1);
@@ -1191,19 +1186,19 @@ public class XParser extends Parser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:5: ( expr2 ( addOperator ^ expr )? )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:17: expr2 ( addOperator ^ expr )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:5: ( expr2 ( addOperator ^ expr )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:17: expr2 ( addOperator ^ expr )?
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expr2_in_expr424);
+			pushFollow(FOLLOW_expr2_in_expr643);
 			expr246=expr2();
 			state._fsp--;
 
 			adaptor.addChild(root_0, expr246.getTree());
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:23: ( addOperator ^ expr )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:23: ( addOperator ^ expr )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( ((LA5_0 >= 21 && LA5_0 <= 22)) ) {
@@ -1211,14 +1206,14 @@ public class XParser extends Parser {
 			}
 			switch (alt5) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:26:24: addOperator ^ expr
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:44:24: addOperator ^ expr
 					{
-					pushFollow(FOLLOW_addOperator_in_expr427);
+					pushFollow(FOLLOW_addOperator_in_expr646);
 					addOperator47=addOperator();
 					state._fsp--;
 
 					root_0 = (Object)adaptor.becomeRoot(addOperator47.getTree(), root_0);
-					pushFollow(FOLLOW_expr_in_expr430);
+					pushFollow(FOLLOW_expr_in_expr649);
 					expr48=expr();
 					state._fsp--;
 
@@ -1258,7 +1253,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "expr2"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:27:1: expr2 : expr3 ( multOperator ^ expr2 )? ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:46:1: expr2 : expr3 ( multOperator ^ expr2 )? ;
 	public final XParser.expr2_return expr2() throws RecognitionException {
 		XParser.expr2_return retval = new XParser.expr2_return();
 		retval.start = input.LT(1);
@@ -1271,19 +1266,19 @@ public class XParser extends Parser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:27:6: ( expr3 ( multOperator ^ expr2 )? )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:27:17: expr3 ( multOperator ^ expr2 )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:46:6: ( expr3 ( multOperator ^ expr2 )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:46:17: expr3 ( multOperator ^ expr2 )?
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expr3_in_expr2447);
+			pushFollow(FOLLOW_expr3_in_expr2667);
 			expr349=expr3();
 			state._fsp--;
 
 			adaptor.addChild(root_0, expr349.getTree());
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:27:23: ( multOperator ^ expr2 )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:46:23: ( multOperator ^ expr2 )?
 			int alt6=2;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0==20||LA6_0==24) ) {
@@ -1291,14 +1286,14 @@ public class XParser extends Parser {
 			}
 			switch (alt6) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:27:24: multOperator ^ expr2
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:46:24: multOperator ^ expr2
 					{
-					pushFollow(FOLLOW_multOperator_in_expr2450);
+					pushFollow(FOLLOW_multOperator_in_expr2670);
 					multOperator50=multOperator();
 					state._fsp--;
 
 					root_0 = (Object)adaptor.becomeRoot(multOperator50.getTree(), root_0);
-					pushFollow(FOLLOW_expr2_in_expr2453);
+					pushFollow(FOLLOW_expr2_in_expr2673);
 					expr251=expr2();
 					state._fsp--;
 
@@ -1338,7 +1333,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "expr3"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:1: expr3 : ( INT | FLOAT | ID | '(' ! expr ')' !| STRING );
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:1: expr3 : ( INT | FLOAT | ID | '(' ! expr ')' !| STRING );
 	public final XParser.expr3_return expr3() throws RecognitionException {
 		XParser.expr3_return retval = new XParser.expr3_return();
 		retval.start = input.LT(1);
@@ -1361,7 +1356,7 @@ public class XParser extends Parser {
 		Object STRING58_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:6: ( INT | FLOAT | ID | '(' ! expr ')' !| STRING )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:6: ( INT | FLOAT | ID | '(' ! expr ')' !| STRING )
 			int alt7=5;
 			switch ( input.LA(1) ) {
 			case INT:
@@ -1396,64 +1391,64 @@ public class XParser extends Parser {
 			}
 			switch (alt7) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:17: INT
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:17: INT
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					INT52=(Token)match(input,INT,FOLLOW_INT_in_expr3470); 
+					INT52=(Token)match(input,INT,FOLLOW_INT_in_expr3691); 
 					INT52_tree = (Object)adaptor.create(INT52);
 					adaptor.addChild(root_0, INT52_tree);
 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:23: FLOAT
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:23: FLOAT
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					FLOAT53=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_expr3474); 
+					FLOAT53=(Token)match(input,FLOAT,FOLLOW_FLOAT_in_expr3695); 
 					FLOAT53_tree = (Object)adaptor.create(FLOAT53);
 					adaptor.addChild(root_0, FLOAT53_tree);
 
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:31: ID
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:31: ID
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					ID54=(Token)match(input,ID,FOLLOW_ID_in_expr3478); 
+					ID54=(Token)match(input,ID,FOLLOW_ID_in_expr3699); 
 					ID54_tree = (Object)adaptor.create(ID54);
 					adaptor.addChild(root_0, ID54_tree);
 
 					}
 					break;
 				case 4 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:36: '(' ! expr ')' !
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:36: '(' ! expr ')' !
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					char_literal55=(Token)match(input,18,FOLLOW_18_in_expr3482); 
-					pushFollow(FOLLOW_expr_in_expr3485);
+					char_literal55=(Token)match(input,18,FOLLOW_18_in_expr3703); 
+					pushFollow(FOLLOW_expr_in_expr3706);
 					expr56=expr();
 					state._fsp--;
 
 					adaptor.addChild(root_0, expr56.getTree());
 
-					char_literal57=(Token)match(input,19,FOLLOW_19_in_expr3487); 
+					char_literal57=(Token)match(input,19,FOLLOW_19_in_expr3708); 
 					}
 					break;
 				case 5 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:28:53: STRING
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:48:53: STRING
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					STRING58=(Token)match(input,STRING,FOLLOW_STRING_in_expr3492); 
+					STRING58=(Token)match(input,STRING,FOLLOW_STRING_in_expr3713); 
 					STRING58_tree = (Object)adaptor.create(STRING58);
 					adaptor.addChild(root_0, STRING58_tree);
 
@@ -1488,7 +1483,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "addOperator"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:30:1: addOperator : ( '+' | '-' );
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:50:1: addOperator : ( '+' | '-' );
 	public final XParser.addOperator_return addOperator() throws RecognitionException {
 		XParser.addOperator_return retval = new XParser.addOperator_return();
 		retval.start = input.LT(1);
@@ -1500,7 +1495,7 @@ public class XParser extends Parser {
 		Object set59_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:30:12: ( '+' | '-' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:50:12: ( '+' | '-' )
 			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:
 			{
 			root_0 = (Object)adaptor.nil();
@@ -1545,7 +1540,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "multOperator"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:31:1: multOperator : ( '*' | '/' );
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:51:1: multOperator : ( '*' | '/' );
 	public final XParser.multOperator_return multOperator() throws RecognitionException {
 		XParser.multOperator_return retval = new XParser.multOperator_return();
 		retval.start = input.LT(1);
@@ -1557,7 +1552,7 @@ public class XParser extends Parser {
 		Object set60_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:31:13: ( '*' | '/' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:51:13: ( '*' | '/' )
 			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:
 			{
 			root_0 = (Object)adaptor.nil();
@@ -1602,7 +1597,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "comparator"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:32:1: comparator : ( '<' | '>' | '=' );
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:52:1: comparator : ( '<' | '>' | '=' );
 	public final XParser.comparator_return comparator() throws RecognitionException {
 		XParser.comparator_return retval = new XParser.comparator_return();
 		retval.start = input.LT(1);
@@ -1614,7 +1609,7 @@ public class XParser extends Parser {
 		Object set61_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:32:11: ( '<' | '>' | '=' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:52:11: ( '<' | '>' | '=' )
 			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:
 			{
 			root_0 = (Object)adaptor.nil();
@@ -1659,7 +1654,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "decl"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:34:1: decl : modifier ID ':' ! TYPE ';' !;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:54:1: decl : modifier ID ':' ! TYPE ';' !;
 	public final XParser.decl_return decl() throws RecognitionException {
 		XParser.decl_return retval = new XParser.decl_return();
 		retval.start = input.LT(1);
@@ -1678,28 +1673,28 @@ public class XParser extends Parser {
 		Object char_literal66_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:34:5: ( modifier ID ':' ! TYPE ';' !)
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:34:17: modifier ID ':' ! TYPE ';' !
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:54:5: ( modifier ID ':' ! TYPE ';' !)
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:54:17: modifier ID ':' ! TYPE ';' !
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_modifier_in_decl548);
+			pushFollow(FOLLOW_modifier_in_decl769);
 			modifier62=modifier();
 			state._fsp--;
 
 			adaptor.addChild(root_0, modifier62.getTree());
 
-			ID63=(Token)match(input,ID,FOLLOW_ID_in_decl550); 
+			ID63=(Token)match(input,ID,FOLLOW_ID_in_decl771); 
 			ID63_tree = (Object)adaptor.create(ID63);
 			adaptor.addChild(root_0, ID63_tree);
 
-			char_literal64=(Token)match(input,25,FOLLOW_25_in_decl552); 
-			TYPE65=(Token)match(input,TYPE,FOLLOW_TYPE_in_decl555); 
+			char_literal64=(Token)match(input,25,FOLLOW_25_in_decl773); 
+			TYPE65=(Token)match(input,TYPE,FOLLOW_TYPE_in_decl776); 
 			TYPE65_tree = (Object)adaptor.create(TYPE65);
 			adaptor.addChild(root_0, TYPE65_tree);
 
-			char_literal66=(Token)match(input,27,FOLLOW_27_in_decl557); 
+			char_literal66=(Token)match(input,27,FOLLOW_27_in_decl778); 
 			}
 
 			retval.stop = input.LT(-1);
@@ -1729,7 +1724,7 @@ public class XParser extends Parser {
 
 
 	// $ANTLR start "modifier"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:1: modifier : ( 'read' 'print' | 'read' | 'print' )? ;
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:1: modifier : ( 'read' 'print' | 'read' | 'print' )? ;
 	public final XParser.modifier_return modifier() throws RecognitionException {
 		XParser.modifier_return retval = new XParser.modifier_return();
 		retval.start = input.LT(1);
@@ -1747,13 +1742,13 @@ public class XParser extends Parser {
 		Object string_literal70_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:9: ( ( 'read' 'print' | 'read' | 'print' )? )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:17: ( 'read' 'print' | 'read' | 'print' )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:9: ( ( 'read' 'print' | 'read' | 'print' )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:17: ( 'read' 'print' | 'read' | 'print' )?
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:17: ( 'read' 'print' | 'read' | 'print' )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:17: ( 'read' 'print' | 'read' | 'print' )?
 			int alt8=4;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==38) ) {
@@ -1770,31 +1765,31 @@ public class XParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:18: 'read' 'print'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:18: 'read' 'print'
 					{
-					string_literal67=(Token)match(input,38,FOLLOW_38_in_modifier571); 
+					string_literal67=(Token)match(input,38,FOLLOW_38_in_modifier792); 
 					string_literal67_tree = (Object)adaptor.create(string_literal67);
 					adaptor.addChild(root_0, string_literal67_tree);
 
-					string_literal68=(Token)match(input,36,FOLLOW_36_in_modifier573); 
+					string_literal68=(Token)match(input,36,FOLLOW_36_in_modifier794); 
 					string_literal68_tree = (Object)adaptor.create(string_literal68);
 					adaptor.addChild(root_0, string_literal68_tree);
 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:35: 'read'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:35: 'read'
 					{
-					string_literal69=(Token)match(input,38,FOLLOW_38_in_modifier577); 
+					string_literal69=(Token)match(input,38,FOLLOW_38_in_modifier798); 
 					string_literal69_tree = (Object)adaptor.create(string_literal69);
 					adaptor.addChild(root_0, string_literal69_tree);
 
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:35:44: 'print'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g:55:44: 'print'
 					{
-					string_literal70=(Token)match(input,36,FOLLOW_36_in_modifier581); 
+					string_literal70=(Token)match(input,36,FOLLOW_36_in_modifier802); 
 					string_literal70_tree = (Object)adaptor.create(string_literal70);
 					adaptor.addChild(root_0, string_literal70_tree);
 
@@ -1834,64 +1829,64 @@ public class XParser extends Parser {
 	public static final BitSet FOLLOW_block_in_program75 = new BitSet(new long[]{0x0000000000800000L});
 	public static final BitSet FOLLOW_23_in_program77 = new BitSet(new long[]{0x0000000000000000L});
 	public static final BitSet FOLLOW_EOF_in_program79 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_decl_in_decllist105 = new BitSet(new long[]{0x0000005000000402L});
-	public static final BitSet FOLLOW_31_in_block175 = new BitSet(new long[]{0x0000010E80000400L});
-	public static final BitSet FOLLOW_statlist_in_block177 = new BitSet(new long[]{0x0000000200000000L});
-	public static final BitSet FOLLOW_33_in_block179 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_statswithsemi_in_statlist200 = new BitSet(new long[]{0x0000010C80000402L});
-	public static final BitSet FOLLOW_stat_in_statswithsemi208 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_statswithsemi210 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_assignstat_in_stat228 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_condstat_in_stat232 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_whilestat_in_stat236 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_forstat_in_stat240 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_block_in_stat244 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_cond261 = new BitSet(new long[]{0x0000000070000000L});
-	public static final BitSet FOLLOW_comparator_in_cond263 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_expr_in_cond265 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_35_in_condstat288 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_cond_in_condstat291 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_39_in_condstat293 = new BitSet(new long[]{0x0000010C80000400L});
-	public static final BitSet FOLLOW_stat_in_condstat296 = new BitSet(new long[]{0x0000000100000002L});
-	public static final BitSet FOLLOW_32_in_condstat306 = new BitSet(new long[]{0x0000010C80000400L});
-	public static final BitSet FOLLOW_stat_in_condstat309 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_40_in_whilestat323 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_18_in_whilestat325 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_cond_in_whilestat327 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_19_in_whilestat329 = new BitSet(new long[]{0x0000010C80000400L});
-	public static final BitSet FOLLOW_stat_in_whilestat331 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_34_in_forstat354 = new BitSet(new long[]{0x0000000000040000L});
-	public static final BitSet FOLLOW_18_in_forstat356 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_assignstat_in_forstat358 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_forstat360 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_cond_in_forstat362 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_forstat364 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_assignstat_in_forstat366 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_19_in_forstat368 = new BitSet(new long[]{0x0000010C80000400L});
-	public static final BitSet FOLLOW_stat_in_forstat370 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_assignstat394 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_26_in_assignstat396 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_expr_in_assignstat398 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr2_in_expr424 = new BitSet(new long[]{0x0000000000600002L});
-	public static final BitSet FOLLOW_addOperator_in_expr427 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_expr_in_expr430 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr3_in_expr2447 = new BitSet(new long[]{0x0000000001100002L});
-	public static final BitSet FOLLOW_multOperator_in_expr2450 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_expr2_in_expr2453 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INT_in_expr3470 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FLOAT_in_expr3474 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_expr3478 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_18_in_expr3482 = new BitSet(new long[]{0x0000000000048E00L});
-	public static final BitSet FOLLOW_expr_in_expr3485 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_19_in_expr3487 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_STRING_in_expr3492 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_modifier_in_decl548 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_ID_in_decl550 = new BitSet(new long[]{0x0000000002000000L});
-	public static final BitSet FOLLOW_25_in_decl552 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_TYPE_in_decl555 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_27_in_decl557 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_38_in_modifier571 = new BitSet(new long[]{0x0000001000000000L});
-	public static final BitSet FOLLOW_36_in_modifier573 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_38_in_modifier577 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_36_in_modifier581 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_decl_in_decllist123 = new BitSet(new long[]{0x0000005000000402L});
+	public static final BitSet FOLLOW_31_in_block221 = new BitSet(new long[]{0x0000010E80000400L});
+	public static final BitSet FOLLOW_statlist_in_block223 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_33_in_block225 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_statswithsemi_in_statlist279 = new BitSet(new long[]{0x0000010C80000402L});
+	public static final BitSet FOLLOW_stat_in_statswithsemi288 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_27_in_statswithsemi290 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_assignstat_in_stat309 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_condstat_in_stat313 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_whilestat_in_stat317 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_forstat_in_stat321 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_block_in_stat325 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_cond343 = new BitSet(new long[]{0x0000000070000000L});
+	public static final BitSet FOLLOW_comparator_in_cond345 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_expr_in_cond347 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_35_in_condstat404 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_cond_in_condstat407 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_condstat409 = new BitSet(new long[]{0x0000010C80000400L});
+	public static final BitSet FOLLOW_stat_in_condstat412 = new BitSet(new long[]{0x0000000100000002L});
+	public static final BitSet FOLLOW_32_in_condstat422 = new BitSet(new long[]{0x0000010C80000400L});
+	public static final BitSet FOLLOW_stat_in_condstat425 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_40_in_whilestat440 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_18_in_whilestat442 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_cond_in_whilestat444 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_19_in_whilestat446 = new BitSet(new long[]{0x0000010C80000400L});
+	public static final BitSet FOLLOW_stat_in_whilestat448 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_34_in_forstat505 = new BitSet(new long[]{0x0000000000040000L});
+	public static final BitSet FOLLOW_18_in_forstat507 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_assignstat_in_forstat509 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_27_in_forstat511 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_cond_in_forstat513 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_27_in_forstat515 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_assignstat_in_forstat517 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_19_in_forstat519 = new BitSet(new long[]{0x0000010C80000400L});
+	public static final BitSet FOLLOW_stat_in_forstat521 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_assignstat579 = new BitSet(new long[]{0x0000000004000000L});
+	public static final BitSet FOLLOW_26_in_assignstat581 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_expr_in_assignstat583 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr2_in_expr643 = new BitSet(new long[]{0x0000000000600002L});
+	public static final BitSet FOLLOW_addOperator_in_expr646 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_expr_in_expr649 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr3_in_expr2667 = new BitSet(new long[]{0x0000000001100002L});
+	public static final BitSet FOLLOW_multOperator_in_expr2670 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_expr2_in_expr2673 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr3691 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_expr3695 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_expr3699 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_18_in_expr3703 = new BitSet(new long[]{0x0000000000048E00L});
+	public static final BitSet FOLLOW_expr_in_expr3706 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_19_in_expr3708 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_STRING_in_expr3713 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_modifier_in_decl769 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_ID_in_decl771 = new BitSet(new long[]{0x0000000002000000L});
+	public static final BitSet FOLLOW_25_in_decl773 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_TYPE_in_decl776 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_27_in_decl778 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_38_in_modifier792 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_36_in_modifier794 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_38_in_modifier798 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_36_in_modifier802 = new BitSet(new long[]{0x0000000000000002L});
 }
