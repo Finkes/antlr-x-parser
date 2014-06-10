@@ -18,8 +18,8 @@ block:          'begin' statlist 'end' -> ^(BLOCK statlist*);
 statlist:       statswithsemi*;
 statswithsemi:  stat ';'!; 
 stat:           assignstat | condstat | whilestat | forstat | block ;
-cond:           expr comperator expr -> ^(comperator expr expr );
-condstat:       'if'^ cond 'then'! stat ('else'! stat)? ;
+cond:           expr comparator expr -> ^(comparator expr expr );
+condstat:       'if'^ cond 'then'! stat (options{greedy=true;}:'else'! stat)? ;
 whilestat:      'while' '(' cond ')' stat -> ^('while' cond stat);
 forstat:        'for' '(' assignstat ';' cond ';' assignstat ')' stat -> ^('for' assignstat cond assignstat stat);
 assignstat:     ID ':=' expr -> ^(ASSIGN ID expr);
@@ -29,7 +29,7 @@ expr3:          INT | FLOAT | ID | '('! expr ')'! | STRING;
 
 addOperator:    '+' | '-';
 multOperator:   '*'| '/';
-comperator:     '<'|'>'|'=';
+comparator:     '<'|'>'|'=';
 
 decl:           modifier ID ':'! TYPE ';'!;
 modifier:       ('read' 'print' | 'read' | 'print')?;
