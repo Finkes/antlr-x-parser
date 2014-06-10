@@ -7,8 +7,11 @@ options {
   ASTLabelType = CommonTree;
 }
 
-@header {package dhbw.compilerbau.xparser; }
-@members { int num_assignments = 0; }
+@header {package dhbw.compilerbau.xparser;
+         import java.util.Hashtable;}
+@members { public int num_assignments = 0; 
+           public Hashtable references = new Hashtable();
+          }
 
 
 program :       ^('program' ID decllist* block);
@@ -23,15 +26,17 @@ statswithsemi:  stat;
 
 stat:           assignstat | condstat | whilestat | forstat | block ;
 
-cond:           ^(comparator expr expr );
+cond:           ^(comparator expr expr);
                 
-condstat:       'if'^ cond  stat (options{greedy=true;}: stat)? ;
+condstat:       ^('if' cond stat stat?) ;
 
 whilestat:      ^('while' cond stat);
                 
 forstat:        ^('for' assignstat cond assignstat stat);
                 
-assignstat:     ^(ASSIGN ID expr);
+assignstat:     ^(ASSIGN id=ID expr) {num_assignments++; 
+                                      if(references.containsKey($id)) { references.put($id,1+(int)references.get($id)); }
+                                      else { references.put($id,1);  }    };
                 
 expr:           term | (^(operator term term));
 

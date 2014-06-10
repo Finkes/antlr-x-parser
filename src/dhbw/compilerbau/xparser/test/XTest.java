@@ -3,6 +3,8 @@ package dhbw.compilerbau.xparser.test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 import javax.xml.bind.annotation.XmlList;
 
@@ -66,6 +68,19 @@ public class XTest {
         	writer.write(genarator.toDOT(reference_counter_tree).toString());
         	
         	writer.close();
+        	
+        	System.out.println("num of assignments: "+reference_counter.num_assignments);
+        	
+        	
+        	Enumeration keys = reference_counter.references.keys();
+        	
+        	while(keys.hasMoreElements())
+        	{
+        		String key = keys.nextElement().toString();
+        		System.out.println(key+reference_counter.references.get(key));
+        	}
+        	
+        	
 			
 		}
 		catch(Exception e)

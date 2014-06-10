@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-10 10:36:54
+// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-10 11:16:42
 package dhbw.compilerbau.xparser; 
 
 import org.antlr.runtime.*;

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-10 10:36:53
+// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X.g 2014-06-10 11:16:41
 package dhbw.compilerbau.xparser; 
 
 import org.antlr.runtime.*;
@@ -150,7 +150,7 @@ public class XParser extends Parser {
 			stream_EOF.add(EOF7);
 
 			// AST REWRITE
-			// elements: 37, ID, block, decllist
+			// elements: block, ID, 37, decllist
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -709,7 +709,7 @@ public class XParser extends Parser {
 
 			stream_expr.add(expr22.getTree());
 			// AST REWRITE
-			// elements: expr, comparator, expr
+			// elements: expr, expr, comparator
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -903,7 +903,7 @@ public class XParser extends Parser {
 
 			stream_stat.add(stat33.getTree());
 			// AST REWRITE
-			// elements: 40, stat, cond
+			// elements: stat, cond, 40
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1028,7 +1028,7 @@ public class XParser extends Parser {
 
 			stream_stat.add(stat42.getTree());
 			// AST REWRITE
-			// elements: assignstat, assignstat, cond, 34, stat
+			// elements: 34, cond, stat, assignstat, assignstat
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1118,7 +1118,7 @@ public class XParser extends Parser {
 
 			stream_expr.add(expr45.getTree());
 			// AST REWRITE
-			// elements: expr, ID
+			// elements: ID, expr
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
