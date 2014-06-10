@@ -16,6 +16,7 @@ import org.antlr.runtime.tree.DOTTreeGenerator;
 
 import dhbw.compilerbau.xparser.XLexer;
 import dhbw.compilerbau.xparser.XParser;
+import dhbw.compilerbau.xparser.X_Variable_Declaration;
 import dhbw.compilerbau.xparser.XParser.program_return;
 import dhbw.compilerbau.xparser.X_Reference_Counter;
 
@@ -74,13 +75,30 @@ public class XTest {
         	
         	Enumeration keys = reference_counter.references.keys();
         	
+        	
+        	int max = 0;
+        	String max_id = "";
+        	
         	while(keys.hasMoreElements())
         	{
         		String key = keys.nextElement().toString();
-        		System.out.println(key+reference_counter.references.get(key));
+        		
+        		int count = (int)reference_counter.references.get(key);
+        		
+        		if(count > max)
+        		{
+        			max = count;
+        			max_id = key;
+        		}
         	}
         	
+        	System.out.println("most assignments to " + max_id +" ("+max+")");
         	
+        	//variable check
+        	
+        	X_Variable_Declaration decl = new X_Variable_Declaration(new CommonTreeNodeStream(reference_counter_tree));
+        	
+        	decl.program();
 			
 		}
 		catch(Exception e)

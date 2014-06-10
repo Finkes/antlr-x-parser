@@ -1,4 +1,4 @@
-tree grammar X_Reference_Counter;
+tree grammar X_Variable_Declaration;
 
 options {
   language = Java;
@@ -7,11 +7,8 @@ options {
   ASTLabelType = CommonTree;
 }
 
-@header {package dhbw.compilerbau.xparser;
-         import java.util.Hashtable;}
-@members { public int num_assignments = 0; 
-           public Hashtable references = new Hashtable();
-          }
+@header {package dhbw.compilerbau.xparser; import java.util.Hashtable; }
+@members { Hashtable variables = new Hashtable(); }
 
 
 program :       ^('program' ID decllist* block);
@@ -34,19 +31,17 @@ whilestat:      ^('while' cond stat);
                 
 forstat:        ^('for' assignstat cond assignstat stat);
                 
-assignstat:     ^(ASSIGN id=ID expr) {num_assignments++; 
-                                      if(references.containsKey($id.text)) { references.put($id.text,1+(int)references.get($id.text)); }
-                                      else { references.put($id.text, 1);  }    };
+assignstat:     ^(ASSIGN ID expr) { if(!variables.containsKey($ID.text)) { System.out.println($ID.text + " is not declared!"); } };
                 
 expr:           term | (^(operator term term));
 
-term:           INT | FLOAT | ID  | STRING;
+term:           INT | FLOAT | ID { if(!variables.containsKey($ID.text)) { System.out.println($ID.text + " is not declared!"); } } | STRING ;
 
 operator:       '+' | '-' | '*'| '/';
 
 comparator:     '<'|'>'|'=';
 
-decl:           modifier ID  TYPE;
+decl:           modifier ID  TYPE { variables.put($ID.text, $TYPE.text); };
 
 modifier:       ('read' 'print' | 'read' | 'print')?;
 

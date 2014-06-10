@@ -14,4 +14,7 @@ begin
 	end;
 	if x<2 then if x<1 then if x<0 then x:=3 else x:=4;
 	z2:= x+3;
+	undefined := 4;
+	
+	if z4 < 5 then z4:=3;
 end.

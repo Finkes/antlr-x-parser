@@ -119,6 +119,20 @@ digraph {
   n79 [label="+"];
   n80 [label="x"];
   n81 [label="3"];
+  n82 [label="ASSIGN"];
+  n82 [label="ASSIGN"];
+  n83 [label="undefined"];
+  n84 [label="4"];
+  n85 [label="if"];
+  n85 [label="if"];
+  n86 [label="<"];
+  n86 [label="<"];
+  n87 [label="z4"];
+  n88 [label="5"];
+  n89 [label="ASSIGN"];
+  n89 [label="ASSIGN"];
+  n90 [label="z4"];
+  n91 [label="3"];
 
   n0 -> n1 // "program" -> "Test7"
   n0 -> n2 // "program" -> "DECLARE"
@@ -201,5 +215,15 @@ digraph {
   n77 -> n79 // "ASSIGN" -> "+"
   n79 -> n80 // "+" -> "x"
   n79 -> n81 // "+" -> "3"
+  n25 -> n82 // "BLOCK" -> "ASSIGN"
+  n82 -> n83 // "ASSIGN" -> "undefined"
+  n82 -> n84 // "ASSIGN" -> "4"
+  n25 -> n85 // "BLOCK" -> "if"
+  n85 -> n86 // "if" -> "<"
+  n86 -> n87 // "<" -> "z4"
+  n86 -> n88 // "<" -> "5"
+  n85 -> n89 // "if" -> "ASSIGN"
+  n89 -> n90 // "ASSIGN" -> "z4"
+  n89 -> n91 // "ASSIGN" -> "3"
 
 }

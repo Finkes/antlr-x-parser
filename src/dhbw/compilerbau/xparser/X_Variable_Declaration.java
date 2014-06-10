@@ -1,6 +1,5 @@
-// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g 2014-06-10 11:36:14
-package dhbw.compilerbau.xparser;
-         import java.util.Hashtable;
+// $ANTLR 3.5.2 /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g 2014-06-10 12:00:34
+package dhbw.compilerbau.xparser; import java.util.Hashtable; 
 
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 
 
 @SuppressWarnings("all")
-public class X_Reference_Counter extends TreeParser {
+public class X_Variable_Declaration extends TreeParser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ASSIGN", "BLOCK", "COND", "DECLARE", 
 		"DIGIT", "FLOAT", "ID", "INT", "LETTER", "NUMBER", "OTHER", "STRING", 
@@ -65,10 +64,10 @@ public class X_Reference_Counter extends TreeParser {
 	// delegators
 
 
-	public X_Reference_Counter(TreeNodeStream input) {
+	public X_Variable_Declaration(TreeNodeStream input) {
 		this(input, new RecognizerSharedState());
 	}
-	public X_Reference_Counter(TreeNodeStream input, RecognizerSharedState state) {
+	public X_Variable_Declaration(TreeNodeStream input, RecognizerSharedState state) {
 		super(input, state);
 	}
 
@@ -80,12 +79,10 @@ public class X_Reference_Counter extends TreeParser {
 	public TreeAdaptor getTreeAdaptor() {
 		return adaptor;
 	}
-	@Override public String[] getTokenNames() { return X_Reference_Counter.tokenNames; }
-	@Override public String getGrammarFileName() { return "/home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g"; }
+	@Override public String[] getTokenNames() { return X_Variable_Declaration.tokenNames; }
+	@Override public String getGrammarFileName() { return "/home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g"; }
 
-	 public int num_assignments = 0; 
-	           public Hashtable references = new Hashtable();
-	          
+	 Hashtable variables = new Hashtable(); 
 
 	public static class program_return extends TreeRuleReturnScope {
 		CommonTree tree;
@@ -95,9 +92,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "program"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:17:1: program : ^( 'program' ID ( decllist )* block ) ;
-	public final X_Reference_Counter.program_return program() throws RecognitionException {
-		X_Reference_Counter.program_return retval = new X_Reference_Counter.program_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:14:1: program : ^( 'program' ID ( decllist )* block ) ;
+	public final X_Variable_Declaration.program_return program() throws RecognitionException {
+		X_Variable_Declaration.program_return retval = new X_Variable_Declaration.program_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -115,8 +112,8 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree ID2_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:17:9: ( ^( 'program' ID ( decllist )* block ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:17:17: ^( 'program' ID ( decllist )* block )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:14:9: ( ^( 'program' ID ( decllist )* block ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:14:17: ^( 'program' ID ( decllist )* block )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -141,7 +138,7 @@ public class X_Reference_Counter extends TreeParser {
 
 			adaptor.addChild(root_1, ID2_tree);
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:17:32: ( decllist )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:14:32: ( decllist )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -152,7 +149,7 @@ public class X_Reference_Counter extends TreeParser {
 
 				switch (alt1) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:17:32: decllist
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:14:32: decllist
 					{
 					_last = (CommonTree)input.LT(1);
 					pushFollow(FOLLOW_decllist_in_program76);
@@ -207,9 +204,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "decllist"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:19:1: decllist : ^( DECLARE decl ) ;
-	public final X_Reference_Counter.decllist_return decllist() throws RecognitionException {
-		X_Reference_Counter.decllist_return retval = new X_Reference_Counter.decllist_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:16:1: decllist : ^( DECLARE decl ) ;
+	public final X_Variable_Declaration.decllist_return decllist() throws RecognitionException {
+		X_Variable_Declaration.decllist_return retval = new X_Variable_Declaration.decllist_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -224,8 +221,8 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree DECLARE5_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:19:9: ( ^( DECLARE decl ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:19:17: ^( DECLARE decl )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:16:9: ( ^( DECLARE decl ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:16:17: ^( DECLARE decl )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -281,9 +278,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "block"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:21:1: block : ^( BLOCK statlist ) ;
-	public final X_Reference_Counter.block_return block() throws RecognitionException {
-		X_Reference_Counter.block_return retval = new X_Reference_Counter.block_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:18:1: block : ^( BLOCK statlist ) ;
+	public final X_Variable_Declaration.block_return block() throws RecognitionException {
+		X_Variable_Declaration.block_return retval = new X_Variable_Declaration.block_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -298,8 +295,8 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree BLOCK7_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:21:6: ( ^( BLOCK statlist ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:21:17: ^( BLOCK statlist )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:18:6: ( ^( BLOCK statlist ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:18:17: ^( BLOCK statlist )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -357,9 +354,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "statlist"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:23:1: statlist : ( statswithsemi )* ;
-	public final X_Reference_Counter.statlist_return statlist() throws RecognitionException {
-		X_Reference_Counter.statlist_return retval = new X_Reference_Counter.statlist_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:20:1: statlist : ( statswithsemi )* ;
+	public final X_Variable_Declaration.statlist_return statlist() throws RecognitionException {
+		X_Variable_Declaration.statlist_return retval = new X_Variable_Declaration.statlist_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -372,13 +369,13 @@ public class X_Reference_Counter extends TreeParser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:23:9: ( ( statswithsemi )* )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:23:17: ( statswithsemi )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:20:9: ( ( statswithsemi )* )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:20:17: ( statswithsemi )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:23:17: ( statswithsemi )*
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:20:17: ( statswithsemi )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -389,7 +386,7 @@ public class X_Reference_Counter extends TreeParser {
 
 				switch (alt2) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:23:17: statswithsemi
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:20:17: statswithsemi
 					{
 					_last = (CommonTree)input.LT(1);
 					pushFollow(FOLLOW_statswithsemi_in_statlist171);
@@ -431,9 +428,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "statswithsemi"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:25:1: statswithsemi : stat ;
-	public final X_Reference_Counter.statswithsemi_return statswithsemi() throws RecognitionException {
-		X_Reference_Counter.statswithsemi_return retval = new X_Reference_Counter.statswithsemi_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:22:1: statswithsemi : stat ;
+	public final X_Variable_Declaration.statswithsemi_return statswithsemi() throws RecognitionException {
+		X_Variable_Declaration.statswithsemi_return retval = new X_Variable_Declaration.statswithsemi_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -446,8 +443,8 @@ public class X_Reference_Counter extends TreeParser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:25:14: ( stat )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:25:17: stat
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:22:14: ( stat )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:22:17: stat
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -484,9 +481,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "stat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:1: stat : ( assignstat | condstat | whilestat | forstat | block );
-	public final X_Reference_Counter.stat_return stat() throws RecognitionException {
-		X_Reference_Counter.stat_return retval = new X_Reference_Counter.stat_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:1: stat : ( assignstat | condstat | whilestat | forstat | block );
+	public final X_Variable_Declaration.stat_return stat() throws RecognitionException {
+		X_Variable_Declaration.stat_return retval = new X_Variable_Declaration.stat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -503,7 +500,7 @@ public class X_Reference_Counter extends TreeParser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:5: ( assignstat | condstat | whilestat | forstat | block )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:5: ( assignstat | condstat | whilestat | forstat | block )
 			int alt3=5;
 			switch ( input.LA(1) ) {
 			case ASSIGN:
@@ -538,7 +535,7 @@ public class X_Reference_Counter extends TreeParser {
 			}
 			switch (alt3) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:17: assignstat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:17: assignstat
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
@@ -553,7 +550,7 @@ public class X_Reference_Counter extends TreeParser {
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:30: condstat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:30: condstat
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
@@ -568,7 +565,7 @@ public class X_Reference_Counter extends TreeParser {
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:41: whilestat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:41: whilestat
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
@@ -583,7 +580,7 @@ public class X_Reference_Counter extends TreeParser {
 					}
 					break;
 				case 4 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:53: forstat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:53: forstat
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
@@ -598,7 +595,7 @@ public class X_Reference_Counter extends TreeParser {
 					}
 					break;
 				case 5 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:27:63: block
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:24:63: block
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
@@ -637,9 +634,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "cond"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:29:1: cond : ^( comparator expr expr ) ;
-	public final X_Reference_Counter.cond_return cond() throws RecognitionException {
-		X_Reference_Counter.cond_return retval = new X_Reference_Counter.cond_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:26:1: cond : ^( comparator expr expr ) ;
+	public final X_Variable_Declaration.cond_return cond() throws RecognitionException {
+		X_Variable_Declaration.cond_return retval = new X_Variable_Declaration.cond_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -654,8 +651,8 @@ public class X_Reference_Counter extends TreeParser {
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:29:5: ( ^( comparator expr expr ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:29:17: ^( comparator expr expr )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:26:5: ( ^( comparator expr expr ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:26:17: ^( comparator expr expr )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -718,9 +715,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "condstat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:31:1: condstat : ^( 'if' cond stat ( stat )? ) ;
-	public final X_Reference_Counter.condstat_return condstat() throws RecognitionException {
-		X_Reference_Counter.condstat_return retval = new X_Reference_Counter.condstat_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:28:1: condstat : ^( 'if' cond stat ( stat )? ) ;
+	public final X_Variable_Declaration.condstat_return condstat() throws RecognitionException {
+		X_Variable_Declaration.condstat_return retval = new X_Variable_Declaration.condstat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -737,8 +734,8 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree string_literal19_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:31:9: ( ^( 'if' cond stat ( stat )? ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:31:17: ^( 'if' cond stat ( stat )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:28:9: ( ^( 'if' cond stat ( stat )? ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:28:17: ^( 'if' cond stat ( stat )? )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -770,7 +767,7 @@ public class X_Reference_Counter extends TreeParser {
 
 			adaptor.addChild(root_1, stat21.getTree());
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:31:34: ( stat )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:28:34: ( stat )?
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( ((LA4_0 >= ASSIGN && LA4_0 <= BLOCK)||(LA4_0 >= 34 && LA4_0 <= 35)||LA4_0==40) ) {
@@ -778,7 +775,7 @@ public class X_Reference_Counter extends TreeParser {
 			}
 			switch (alt4) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:31:34: stat
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:28:34: stat
 					{
 					_last = (CommonTree)input.LT(1);
 					pushFollow(FOLLOW_stat_in_condstat274);
@@ -823,9 +820,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "whilestat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:33:1: whilestat : ^( 'while' cond stat ) ;
-	public final X_Reference_Counter.whilestat_return whilestat() throws RecognitionException {
-		X_Reference_Counter.whilestat_return retval = new X_Reference_Counter.whilestat_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:30:1: whilestat : ^( 'while' cond stat ) ;
+	public final X_Variable_Declaration.whilestat_return whilestat() throws RecognitionException {
+		X_Variable_Declaration.whilestat_return retval = new X_Variable_Declaration.whilestat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -841,8 +838,8 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree string_literal23_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:33:10: ( ^( 'while' cond stat ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:33:17: ^( 'while' cond stat )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:30:10: ( ^( 'while' cond stat ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:30:17: ^( 'while' cond stat )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -905,9 +902,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "forstat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:35:1: forstat : ^( 'for' assignstat cond assignstat stat ) ;
-	public final X_Reference_Counter.forstat_return forstat() throws RecognitionException {
-		X_Reference_Counter.forstat_return retval = new X_Reference_Counter.forstat_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:32:1: forstat : ^( 'for' assignstat cond assignstat stat ) ;
+	public final X_Variable_Declaration.forstat_return forstat() throws RecognitionException {
+		X_Variable_Declaration.forstat_return retval = new X_Variable_Declaration.forstat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -925,8 +922,8 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree string_literal26_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:35:8: ( ^( 'for' assignstat cond assignstat stat ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:35:17: ^( 'for' assignstat cond assignstat stat )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:32:8: ( ^( 'for' assignstat cond assignstat stat ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:32:17: ^( 'for' assignstat cond assignstat stat )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -1003,9 +1000,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "assignstat"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:37:1: assignstat : ^( ASSIGN id= ID expr ) ;
-	public final X_Reference_Counter.assignstat_return assignstat() throws RecognitionException {
-		X_Reference_Counter.assignstat_return retval = new X_Reference_Counter.assignstat_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:34:1: assignstat : ^( ASSIGN ID expr ) ;
+	public final X_Variable_Declaration.assignstat_return assignstat() throws RecognitionException {
+		X_Variable_Declaration.assignstat_return retval = new X_Variable_Declaration.assignstat_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1014,16 +1011,16 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		CommonTree id=null;
 		CommonTree ASSIGN31=null;
-		TreeRuleReturnScope expr32 =null;
+		CommonTree ID32=null;
+		TreeRuleReturnScope expr33 =null;
 
-		CommonTree id_tree=null;
 		CommonTree ASSIGN31_tree=null;
+		CommonTree ID32_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:37:11: ( ^( ASSIGN id= ID expr ) )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:37:17: ^( ASSIGN id= ID expr )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:34:11: ( ^( ASSIGN ID expr ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:34:17: ^( ASSIGN ID expr )
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
@@ -1042,18 +1039,18 @@ public class X_Reference_Counter extends TreeParser {
 
 			match(input, Token.DOWN, null); 
 			_last = (CommonTree)input.LT(1);
-			id=(CommonTree)match(input,ID,FOLLOW_ID_in_assignstat367); 
-			id_tree = (CommonTree)adaptor.dupNode(id);
+			ID32=(CommonTree)match(input,ID,FOLLOW_ID_in_assignstat365); 
+			ID32_tree = (CommonTree)adaptor.dupNode(ID32);
 
 
-			adaptor.addChild(root_1, id_tree);
+			adaptor.addChild(root_1, ID32_tree);
 
 			_last = (CommonTree)input.LT(1);
-			pushFollow(FOLLOW_expr_in_assignstat369);
-			expr32=expr();
+			pushFollow(FOLLOW_expr_in_assignstat367);
+			expr33=expr();
 			state._fsp--;
 
-			adaptor.addChild(root_1, expr32.getTree());
+			adaptor.addChild(root_1, expr33.getTree());
 
 			match(input, Token.UP, null); 
 			adaptor.addChild(root_0, root_1);
@@ -1061,9 +1058,7 @@ public class X_Reference_Counter extends TreeParser {
 			}
 
 
-			num_assignments++; 
-			                                      if(references.containsKey((id!=null?id.getText():null))) { references.put((id!=null?id.getText():null),1+(int)references.get((id!=null?id.getText():null))); }
-			                                      else { references.put((id!=null?id.getText():null), 1);  }    
+			 if(!variables.containsKey((ID32!=null?ID32.getText():null))) { System.out.println((ID32!=null?ID32.getText():null) + " is not declared!"); } 
 			}
 
 			retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
@@ -1089,9 +1084,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "expr"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:41:1: expr : ( term | ( ^( operator term term ) ) );
-	public final X_Reference_Counter.expr_return expr() throws RecognitionException {
-		X_Reference_Counter.expr_return retval = new X_Reference_Counter.expr_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:36:1: expr : ( term | ( ^( operator term term ) ) );
+	public final X_Variable_Declaration.expr_return expr() throws RecognitionException {
+		X_Variable_Declaration.expr_return retval = new X_Variable_Declaration.expr_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1100,14 +1095,14 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		TreeRuleReturnScope term33 =null;
-		TreeRuleReturnScope operator34 =null;
-		TreeRuleReturnScope term35 =null;
+		TreeRuleReturnScope term34 =null;
+		TreeRuleReturnScope operator35 =null;
 		TreeRuleReturnScope term36 =null;
+		TreeRuleReturnScope term37 =null;
 
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:41:5: ( term | ( ^( operator term term ) ) )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:36:5: ( term | ( ^( operator term term ) ) )
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( ((LA5_0 >= FLOAT && LA5_0 <= INT)||LA5_0==STRING) ) {
@@ -1125,28 +1120,28 @@ public class X_Reference_Counter extends TreeParser {
 
 			switch (alt5) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:41:17: term
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:36:17: term
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
 					_last = (CommonTree)input.LT(1);
-					pushFollow(FOLLOW_term_in_expr405);
-					term33=term();
+					pushFollow(FOLLOW_term_in_expr403);
+					term34=term();
 					state._fsp--;
 
-					adaptor.addChild(root_0, term33.getTree());
+					adaptor.addChild(root_0, term34.getTree());
 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:41:24: ( ^( operator term term ) )
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:36:24: ( ^( operator term term ) )
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:41:24: ( ^( operator term term ) )
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:41:25: ^( operator term term )
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:36:24: ( ^( operator term term ) )
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:36:25: ^( operator term term )
 					{
 					_last = (CommonTree)input.LT(1);
 					{
@@ -1154,26 +1149,26 @@ public class X_Reference_Counter extends TreeParser {
 					CommonTree _first_1 = null;
 					CommonTree root_1 = (CommonTree)adaptor.nil();
 					_last = (CommonTree)input.LT(1);
-					pushFollow(FOLLOW_operator_in_expr411);
-					operator34=operator();
+					pushFollow(FOLLOW_operator_in_expr409);
+					operator35=operator();
 					state._fsp--;
 
-					root_1 = (CommonTree)adaptor.becomeRoot(operator34.getTree(), root_1);
+					root_1 = (CommonTree)adaptor.becomeRoot(operator35.getTree(), root_1);
 
 					match(input, Token.DOWN, null); 
 					_last = (CommonTree)input.LT(1);
-					pushFollow(FOLLOW_term_in_expr413);
-					term35=term();
-					state._fsp--;
-
-					adaptor.addChild(root_1, term35.getTree());
-
-					_last = (CommonTree)input.LT(1);
-					pushFollow(FOLLOW_term_in_expr415);
+					pushFollow(FOLLOW_term_in_expr411);
 					term36=term();
 					state._fsp--;
 
 					adaptor.addChild(root_1, term36.getTree());
+
+					_last = (CommonTree)input.LT(1);
+					pushFollow(FOLLOW_term_in_expr413);
+					term37=term();
+					state._fsp--;
+
+					adaptor.addChild(root_1, term37.getTree());
 
 					match(input, Token.UP, null); 
 					adaptor.addChild(root_0, root_1);
@@ -1210,9 +1205,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "term"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:43:1: term : ( INT | FLOAT | ID | STRING );
-	public final X_Reference_Counter.term_return term() throws RecognitionException {
-		X_Reference_Counter.term_return retval = new X_Reference_Counter.term_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:38:1: term : ( INT | FLOAT | ID | STRING );
+	public final X_Variable_Declaration.term_return term() throws RecognitionException {
+		X_Variable_Declaration.term_return retval = new X_Variable_Declaration.term_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1221,37 +1216,109 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		CommonTree set37=null;
+		CommonTree INT38=null;
+		CommonTree FLOAT39=null;
+		CommonTree ID40=null;
+		CommonTree STRING41=null;
 
-		CommonTree set37_tree=null;
+		CommonTree INT38_tree=null;
+		CommonTree FLOAT39_tree=null;
+		CommonTree ID40_tree=null;
+		CommonTree STRING41_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:43:5: ( INT | FLOAT | ID | STRING )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:
-			{
-			root_0 = (CommonTree)adaptor.nil();
-
-
-			_last = (CommonTree)input.LT(1);
-			set37=(CommonTree)input.LT(1);
-			if ( (input.LA(1) >= FLOAT && input.LA(1) <= INT)||input.LA(1)==STRING ) {
-				input.consume();
-				set37_tree = (CommonTree)adaptor.dupNode(set37);
-
-
-				adaptor.addChild(root_0, set37_tree);
-
-				state.errorRecovery=false;
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:38:5: ( INT | FLOAT | ID | STRING )
+			int alt6=4;
+			switch ( input.LA(1) ) {
+			case INT:
+				{
+				alt6=1;
+				}
+				break;
+			case FLOAT:
+				{
+				alt6=2;
+				}
+				break;
+			case ID:
+				{
+				alt6=3;
+				}
+				break;
+			case STRING:
+				{
+				alt6=4;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 6, 0, input);
+				throw nvae;
 			}
-			else {
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				throw mse;
+			switch (alt6) {
+				case 1 :
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:38:17: INT
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					_last = (CommonTree)input.LT(1);
+					INT38=(CommonTree)match(input,INT,FOLLOW_INT_in_term432); 
+					INT38_tree = (CommonTree)adaptor.dupNode(INT38);
+
+
+					adaptor.addChild(root_0, INT38_tree);
+
+					}
+					break;
+				case 2 :
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:38:23: FLOAT
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					_last = (CommonTree)input.LT(1);
+					FLOAT39=(CommonTree)match(input,FLOAT,FOLLOW_FLOAT_in_term436); 
+					FLOAT39_tree = (CommonTree)adaptor.dupNode(FLOAT39);
+
+
+					adaptor.addChild(root_0, FLOAT39_tree);
+
+					}
+					break;
+				case 3 :
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:38:31: ID
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					_last = (CommonTree)input.LT(1);
+					ID40=(CommonTree)match(input,ID,FOLLOW_ID_in_term440); 
+					ID40_tree = (CommonTree)adaptor.dupNode(ID40);
+
+
+					adaptor.addChild(root_0, ID40_tree);
+
+					 if(!variables.containsKey((ID40!=null?ID40.getText():null))) { System.out.println((ID40!=null?ID40.getText():null) + " is not declared!"); } 
+					}
+					break;
+				case 4 :
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:38:133: STRING
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					_last = (CommonTree)input.LT(1);
+					STRING41=(CommonTree)match(input,STRING,FOLLOW_STRING_in_term446); 
+					STRING41_tree = (CommonTree)adaptor.dupNode(STRING41);
+
+
+					adaptor.addChild(root_0, STRING41_tree);
+
+					}
+					break;
+
 			}
-
-			 
-
-			}
-
 			retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
 
 		}
@@ -1275,9 +1342,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "operator"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:45:1: operator : ( '+' | '-' | '*' | '/' );
-	public final X_Reference_Counter.operator_return operator() throws RecognitionException {
-		X_Reference_Counter.operator_return retval = new X_Reference_Counter.operator_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:40:1: operator : ( '+' | '-' | '*' | '/' );
+	public final X_Variable_Declaration.operator_return operator() throws RecognitionException {
+		X_Variable_Declaration.operator_return retval = new X_Variable_Declaration.operator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1286,25 +1353,25 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		CommonTree set38=null;
+		CommonTree set42=null;
 
-		CommonTree set38_tree=null;
+		CommonTree set42_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:45:9: ( '+' | '-' | '*' | '/' )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:40:9: ( '+' | '-' | '*' | '/' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
 			_last = (CommonTree)input.LT(1);
-			set38=(CommonTree)input.LT(1);
+			set42=(CommonTree)input.LT(1);
 			if ( (input.LA(1) >= 20 && input.LA(1) <= 22)||input.LA(1)==24 ) {
 				input.consume();
-				set38_tree = (CommonTree)adaptor.dupNode(set38);
+				set42_tree = (CommonTree)adaptor.dupNode(set42);
 
 
-				adaptor.addChild(root_0, set38_tree);
+				adaptor.addChild(root_0, set42_tree);
 
 				state.errorRecovery=false;
 			}
@@ -1340,9 +1407,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "comparator"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:47:1: comparator : ( '<' | '>' | '=' );
-	public final X_Reference_Counter.comparator_return comparator() throws RecognitionException {
-		X_Reference_Counter.comparator_return retval = new X_Reference_Counter.comparator_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:42:1: comparator : ( '<' | '>' | '=' );
+	public final X_Variable_Declaration.comparator_return comparator() throws RecognitionException {
+		X_Variable_Declaration.comparator_return retval = new X_Variable_Declaration.comparator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1351,25 +1418,25 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		CommonTree set39=null;
+		CommonTree set43=null;
 
-		CommonTree set39_tree=null;
+		CommonTree set43_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:47:11: ( '<' | '>' | '=' )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:42:11: ( '<' | '>' | '=' )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
 			_last = (CommonTree)input.LT(1);
-			set39=(CommonTree)input.LT(1);
+			set43=(CommonTree)input.LT(1);
 			if ( (input.LA(1) >= 28 && input.LA(1) <= 30) ) {
 				input.consume();
-				set39_tree = (CommonTree)adaptor.dupNode(set39);
+				set43_tree = (CommonTree)adaptor.dupNode(set43);
 
 
-				adaptor.addChild(root_0, set39_tree);
+				adaptor.addChild(root_0, set43_tree);
 
 				state.errorRecovery=false;
 			}
@@ -1405,9 +1472,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "decl"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:49:1: decl : modifier ID TYPE ;
-	public final X_Reference_Counter.decl_return decl() throws RecognitionException {
-		X_Reference_Counter.decl_return retval = new X_Reference_Counter.decl_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:44:1: decl : modifier ID TYPE ;
+	public final X_Variable_Declaration.decl_return decl() throws RecognitionException {
+		X_Variable_Declaration.decl_return retval = new X_Variable_Declaration.decl_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1416,41 +1483,42 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		CommonTree ID41=null;
-		CommonTree TYPE42=null;
-		TreeRuleReturnScope modifier40 =null;
+		CommonTree ID45=null;
+		CommonTree TYPE46=null;
+		TreeRuleReturnScope modifier44 =null;
 
-		CommonTree ID41_tree=null;
-		CommonTree TYPE42_tree=null;
+		CommonTree ID45_tree=null;
+		CommonTree TYPE46_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:49:5: ( modifier ID TYPE )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:49:17: modifier ID TYPE
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:44:5: ( modifier ID TYPE )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:44:17: modifier ID TYPE
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
 			_last = (CommonTree)input.LT(1);
 			pushFollow(FOLLOW_modifier_in_decl503);
-			modifier40=modifier();
+			modifier44=modifier();
 			state._fsp--;
 
-			adaptor.addChild(root_0, modifier40.getTree());
+			adaptor.addChild(root_0, modifier44.getTree());
 
 			_last = (CommonTree)input.LT(1);
-			ID41=(CommonTree)match(input,ID,FOLLOW_ID_in_decl505); 
-			ID41_tree = (CommonTree)adaptor.dupNode(ID41);
+			ID45=(CommonTree)match(input,ID,FOLLOW_ID_in_decl505); 
+			ID45_tree = (CommonTree)adaptor.dupNode(ID45);
 
 
-			adaptor.addChild(root_0, ID41_tree);
+			adaptor.addChild(root_0, ID45_tree);
 
 			_last = (CommonTree)input.LT(1);
-			TYPE42=(CommonTree)match(input,TYPE,FOLLOW_TYPE_in_decl508); 
-			TYPE42_tree = (CommonTree)adaptor.dupNode(TYPE42);
+			TYPE46=(CommonTree)match(input,TYPE,FOLLOW_TYPE_in_decl508); 
+			TYPE46_tree = (CommonTree)adaptor.dupNode(TYPE46);
 
 
-			adaptor.addChild(root_0, TYPE42_tree);
+			adaptor.addChild(root_0, TYPE46_tree);
 
+			 variables.put((ID45!=null?ID45.getText():null), (TYPE46!=null?TYPE46.getText():null)); 
 			}
 
 			retval.tree = (CommonTree)adaptor.rulePostProcessing(root_0);
@@ -1476,9 +1544,9 @@ public class X_Reference_Counter extends TreeParser {
 
 
 	// $ANTLR start "modifier"
-	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:1: modifier : ( 'read' 'print' | 'read' | 'print' )? ;
-	public final X_Reference_Counter.modifier_return modifier() throws RecognitionException {
-		X_Reference_Counter.modifier_return retval = new X_Reference_Counter.modifier_return();
+	// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:1: modifier : ( 'read' 'print' | 'read' | 'print' )? ;
+	public final X_Variable_Declaration.modifier_return modifier() throws RecognitionException {
+		X_Variable_Declaration.modifier_return retval = new X_Variable_Declaration.modifier_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
@@ -1487,79 +1555,79 @@ public class X_Reference_Counter extends TreeParser {
 		CommonTree _last = null;
 
 
-		CommonTree string_literal43=null;
-		CommonTree string_literal44=null;
-		CommonTree string_literal45=null;
-		CommonTree string_literal46=null;
+		CommonTree string_literal47=null;
+		CommonTree string_literal48=null;
+		CommonTree string_literal49=null;
+		CommonTree string_literal50=null;
 
-		CommonTree string_literal43_tree=null;
-		CommonTree string_literal44_tree=null;
-		CommonTree string_literal45_tree=null;
-		CommonTree string_literal46_tree=null;
+		CommonTree string_literal47_tree=null;
+		CommonTree string_literal48_tree=null;
+		CommonTree string_literal49_tree=null;
+		CommonTree string_literal50_tree=null;
 
 		try {
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:9: ( ( 'read' 'print' | 'read' | 'print' )? )
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:17: ( 'read' 'print' | 'read' | 'print' )?
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:9: ( ( 'read' 'print' | 'read' | 'print' )? )
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:17: ( 'read' 'print' | 'read' | 'print' )?
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:17: ( 'read' 'print' | 'read' | 'print' )?
-			int alt6=4;
-			int LA6_0 = input.LA(1);
-			if ( (LA6_0==38) ) {
-				int LA6_1 = input.LA(2);
-				if ( (LA6_1==36) ) {
-					alt6=1;
+			// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:17: ( 'read' 'print' | 'read' | 'print' )?
+			int alt7=4;
+			int LA7_0 = input.LA(1);
+			if ( (LA7_0==38) ) {
+				int LA7_1 = input.LA(2);
+				if ( (LA7_1==36) ) {
+					alt7=1;
 				}
-				else if ( (LA6_1==ID) ) {
-					alt6=2;
+				else if ( (LA7_1==ID) ) {
+					alt7=2;
 				}
 			}
-			else if ( (LA6_0==36) ) {
-				alt6=3;
+			else if ( (LA7_0==36) ) {
+				alt7=3;
 			}
-			switch (alt6) {
+			switch (alt7) {
 				case 1 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:18: 'read' 'print'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:18: 'read' 'print'
 					{
 					_last = (CommonTree)input.LT(1);
-					string_literal43=(CommonTree)match(input,38,FOLLOW_38_in_modifier522); 
-					string_literal43_tree = (CommonTree)adaptor.dupNode(string_literal43);
+					string_literal47=(CommonTree)match(input,38,FOLLOW_38_in_modifier524); 
+					string_literal47_tree = (CommonTree)adaptor.dupNode(string_literal47);
 
 
-					adaptor.addChild(root_0, string_literal43_tree);
+					adaptor.addChild(root_0, string_literal47_tree);
 
 					_last = (CommonTree)input.LT(1);
-					string_literal44=(CommonTree)match(input,36,FOLLOW_36_in_modifier524); 
-					string_literal44_tree = (CommonTree)adaptor.dupNode(string_literal44);
+					string_literal48=(CommonTree)match(input,36,FOLLOW_36_in_modifier526); 
+					string_literal48_tree = (CommonTree)adaptor.dupNode(string_literal48);
 
 
-					adaptor.addChild(root_0, string_literal44_tree);
+					adaptor.addChild(root_0, string_literal48_tree);
 
 					}
 					break;
 				case 2 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:35: 'read'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:35: 'read'
 					{
 					_last = (CommonTree)input.LT(1);
-					string_literal45=(CommonTree)match(input,38,FOLLOW_38_in_modifier528); 
-					string_literal45_tree = (CommonTree)adaptor.dupNode(string_literal45);
+					string_literal49=(CommonTree)match(input,38,FOLLOW_38_in_modifier530); 
+					string_literal49_tree = (CommonTree)adaptor.dupNode(string_literal49);
 
 
-					adaptor.addChild(root_0, string_literal45_tree);
+					adaptor.addChild(root_0, string_literal49_tree);
 
 					}
 					break;
 				case 3 :
-					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Reference_Counter.g:51:44: 'print'
+					// /home/dominik/dev/java/AntlrX/src/dhbw/compilerbau/xparser/X_Variable_Declaration.g:46:44: 'print'
 					{
 					_last = (CommonTree)input.LT(1);
-					string_literal46=(CommonTree)match(input,36,FOLLOW_36_in_modifier532); 
-					string_literal46_tree = (CommonTree)adaptor.dupNode(string_literal46);
+					string_literal50=(CommonTree)match(input,36,FOLLOW_36_in_modifier534); 
+					string_literal50_tree = (CommonTree)adaptor.dupNode(string_literal50);
 
 
-					adaptor.addChild(root_0, string_literal46_tree);
+					adaptor.addChild(root_0, string_literal50_tree);
 
 					}
 					break;
@@ -1617,17 +1685,21 @@ public class X_Reference_Counter extends TreeParser {
 	public static final BitSet FOLLOW_assignstat_in_forstat332 = new BitSet(new long[]{0x0000010C00000030L});
 	public static final BitSet FOLLOW_stat_in_forstat334 = new BitSet(new long[]{0x0000000000000008L});
 	public static final BitSet FOLLOW_ASSIGN_in_assignstat363 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_assignstat367 = new BitSet(new long[]{0x0000000001708E00L});
-	public static final BitSet FOLLOW_expr_in_assignstat369 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_term_in_expr405 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_operator_in_expr411 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_term_in_expr413 = new BitSet(new long[]{0x0000000000008E00L});
-	public static final BitSet FOLLOW_term_in_expr415 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_ID_in_assignstat365 = new BitSet(new long[]{0x0000000001708E00L});
+	public static final BitSet FOLLOW_expr_in_assignstat367 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_term_in_expr403 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_operator_in_expr409 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_term_in_expr411 = new BitSet(new long[]{0x0000000000008E00L});
+	public static final BitSet FOLLOW_term_in_expr413 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_INT_in_term432 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FLOAT_in_term436 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_term440 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_STRING_in_term446 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_modifier_in_decl503 = new BitSet(new long[]{0x0000000000000400L});
 	public static final BitSet FOLLOW_ID_in_decl505 = new BitSet(new long[]{0x0000000000010000L});
 	public static final BitSet FOLLOW_TYPE_in_decl508 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_38_in_modifier522 = new BitSet(new long[]{0x0000001000000000L});
-	public static final BitSet FOLLOW_36_in_modifier524 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_38_in_modifier528 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_36_in_modifier532 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_38_in_modifier524 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_36_in_modifier526 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_38_in_modifier530 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_36_in_modifier534 = new BitSet(new long[]{0x0000000000000002L});
 }
