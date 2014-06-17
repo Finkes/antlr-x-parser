@@ -16,6 +16,7 @@ import org.antlr.runtime.tree.DOTTreeGenerator;
 
 import dhbw.compilerbau.xparser.XLexer;
 import dhbw.compilerbau.xparser.XParser;
+import dhbw.compilerbau.xparser.X_Java_Code_Transformation;
 import dhbw.compilerbau.xparser.X_Variable_Declaration;
 import dhbw.compilerbau.xparser.XParser.program_return;
 import dhbw.compilerbau.xparser.X_Reference_Counter;
@@ -98,7 +99,15 @@ public class XTest {
         	
         	X_Variable_Declaration decl = new X_Variable_Declaration(new CommonTreeNodeStream(reference_counter_tree));
         	
-        	decl.program();
+        	
+        	
+        	//code transformation
+        	X_Java_Code_Transformation transformation = new X_Java_Code_Transformation(new CommonTreeNodeStream(decl.program().getTree()));
+        	
+        	dhbw.compilerbau.xparser.X_Java_Code_Transformation.program_return code_return =  transformation.program();
+        	
+        	System.out.println(code_return.getTemplate().toString());
+        	
 			
 		}
 		catch(Exception e)

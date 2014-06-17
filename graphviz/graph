@@ -11,219 +11,221 @@ digraph {
   n2 [label="DECLARE"];
   n2 [label="DECLARE"];
   n3 [label="read"];
-  n4 [label="x"];
-  n5 [label="int"];
-  n6 [label="DECLARE"];
-  n6 [label="DECLARE"];
-  n7 [label="print"];
-  n8 [label="y"];
-  n9 [label="float"];
-  n10 [label="DECLARE"];
-  n10 [label="DECLARE"];
-  n11 [label="print"];
-  n12 [label="z1"];
-  n13 [label="float"];
-  n14 [label="DECLARE"];
-  n14 [label="DECLARE"];
-  n15 [label="print"];
-  n16 [label="z2"];
-  n17 [label="float"];
-  n18 [label="DECLARE"];
-  n18 [label="DECLARE"];
-  n19 [label="print"];
-  n20 [label="z3"];
-  n21 [label="float"];
-  n22 [label="DECLARE"];
-  n22 [label="DECLARE"];
-  n23 [label="i"];
-  n24 [label="int"];
-  n25 [label="BLOCK"];
-  n25 [label="BLOCK"];
-  n26 [label="ASSIGN"];
-  n26 [label="ASSIGN"];
-  n27 [label="x"];
-  n28 [label="+"];
-  n28 [label="+"];
-  n29 [label="3"];
-  n30 [label="4"];
-  n31 [label="ASSIGN"];
-  n31 [label="ASSIGN"];
-  n32 [label="y"];
-  n33 [label="+"];
-  n33 [label="+"];
-  n34 [label="x"];
-  n35 [label="2"];
-  n36 [label="ASSIGN"];
-  n36 [label="ASSIGN"];
-  n37 [label="y"];
-  n38 [label="*"];
-  n38 [label="*"];
-  n39 [label="2"];
-  n40 [label="y"];
-  n41 [label="for"];
-  n41 [label="for"];
-  n42 [label="ASSIGN"];
-  n42 [label="ASSIGN"];
-  n43 [label="i"];
-  n44 [label="x"];
-  n45 [label="<"];
-  n45 [label="<"];
-  n46 [label="i"];
-  n47 [label="20"];
-  n48 [label="ASSIGN"];
-  n48 [label="ASSIGN"];
-  n49 [label="i"];
-  n50 [label="+"];
-  n50 [label="+"];
-  n51 [label="i"];
-  n52 [label="1"];
-  n53 [label="BLOCK"];
-  n53 [label="BLOCK"];
-  n54 [label="ASSIGN"];
-  n54 [label="ASSIGN"];
-  n55 [label="z1"];
-  n56 [label="+"];
-  n56 [label="+"];
-  n57 [label="y"];
-  n58 [label="1"];
-  n59 [label="if"];
-  n59 [label="if"];
-  n60 [label="<"];
-  n60 [label="<"];
-  n61 [label="x"];
-  n62 [label="2"];
-  n63 [label="if"];
-  n63 [label="if"];
-  n64 [label="<"];
-  n64 [label="<"];
-  n65 [label="x"];
-  n66 [label="1"];
-  n67 [label="if"];
-  n67 [label="if"];
-  n68 [label="<"];
-  n68 [label="<"];
-  n69 [label="x"];
-  n70 [label="0"];
-  n71 [label="ASSIGN"];
-  n71 [label="ASSIGN"];
-  n72 [label="x"];
-  n73 [label="3"];
-  n74 [label="ASSIGN"];
-  n74 [label="ASSIGN"];
-  n75 [label="x"];
-  n76 [label="4"];
-  n77 [label="ASSIGN"];
-  n77 [label="ASSIGN"];
-  n78 [label="z2"];
-  n79 [label="+"];
-  n79 [label="+"];
-  n80 [label="x"];
-  n81 [label="3"];
-  n82 [label="ASSIGN"];
-  n82 [label="ASSIGN"];
-  n83 [label="undefined"];
-  n84 [label="4"];
-  n85 [label="if"];
-  n85 [label="if"];
-  n86 [label="<"];
-  n86 [label="<"];
-  n87 [label="z4"];
-  n88 [label="5"];
-  n89 [label="ASSIGN"];
-  n89 [label="ASSIGN"];
-  n90 [label="z4"];
-  n91 [label="3"];
+  n4 [label="print"];
+  n5 [label="x"];
+  n6 [label="int"];
+  n7 [label="DECLARE"];
+  n7 [label="DECLARE"];
+  n8 [label="print"];
+  n9 [label="y"];
+  n10 [label="float"];
+  n11 [label="DECLARE"];
+  n11 [label="DECLARE"];
+  n12 [label="print"];
+  n13 [label="z1"];
+  n14 [label="float"];
+  n15 [label="DECLARE"];
+  n15 [label="DECLARE"];
+  n16 [label="print"];
+  n17 [label="z2"];
+  n18 [label="float"];
+  n19 [label="DECLARE"];
+  n19 [label="DECLARE"];
+  n20 [label="print"];
+  n21 [label="z3"];
+  n22 [label="float"];
+  n23 [label="DECLARE"];
+  n23 [label="DECLARE"];
+  n24 [label="i"];
+  n25 [label="int"];
+  n26 [label="BLOCK"];
+  n26 [label="BLOCK"];
+  n27 [label="ASSIGN"];
+  n27 [label="ASSIGN"];
+  n28 [label="x"];
+  n29 [label="+"];
+  n29 [label="+"];
+  n30 [label="3"];
+  n31 [label="4"];
+  n32 [label="ASSIGN"];
+  n32 [label="ASSIGN"];
+  n33 [label="y"];
+  n34 [label="+"];
+  n34 [label="+"];
+  n35 [label="x"];
+  n36 [label="2"];
+  n37 [label="ASSIGN"];
+  n37 [label="ASSIGN"];
+  n38 [label="y"];
+  n39 [label="*"];
+  n39 [label="*"];
+  n40 [label="2"];
+  n41 [label="y"];
+  n42 [label="for"];
+  n42 [label="for"];
+  n43 [label="ASSIGN"];
+  n43 [label="ASSIGN"];
+  n44 [label="i"];
+  n45 [label="x"];
+  n46 [label="<"];
+  n46 [label="<"];
+  n47 [label="i"];
+  n48 [label="20"];
+  n49 [label="ASSIGN"];
+  n49 [label="ASSIGN"];
+  n50 [label="i"];
+  n51 [label="+"];
+  n51 [label="+"];
+  n52 [label="i"];
+  n53 [label="1"];
+  n54 [label="BLOCK"];
+  n54 [label="BLOCK"];
+  n55 [label="ASSIGN"];
+  n55 [label="ASSIGN"];
+  n56 [label="z1"];
+  n57 [label="+"];
+  n57 [label="+"];
+  n58 [label="y"];
+  n59 [label="1"];
+  n60 [label="if"];
+  n60 [label="if"];
+  n61 [label="<"];
+  n61 [label="<"];
+  n62 [label="x"];
+  n63 [label="2"];
+  n64 [label="if"];
+  n64 [label="if"];
+  n65 [label="<"];
+  n65 [label="<"];
+  n66 [label="x"];
+  n67 [label="1"];
+  n68 [label="if"];
+  n68 [label="if"];
+  n69 [label="<"];
+  n69 [label="<"];
+  n70 [label="x"];
+  n71 [label="0"];
+  n72 [label="ASSIGN"];
+  n72 [label="ASSIGN"];
+  n73 [label="x"];
+  n74 [label="3"];
+  n75 [label="ASSIGN"];
+  n75 [label="ASSIGN"];
+  n76 [label="x"];
+  n77 [label="4"];
+  n78 [label="ASSIGN"];
+  n78 [label="ASSIGN"];
+  n79 [label="z2"];
+  n80 [label="+"];
+  n80 [label="+"];
+  n81 [label="x"];
+  n82 [label="3"];
+  n83 [label="ASSIGN"];
+  n83 [label="ASSIGN"];
+  n84 [label="undefined"];
+  n85 [label="4"];
+  n86 [label="if"];
+  n86 [label="if"];
+  n87 [label="<"];
+  n87 [label="<"];
+  n88 [label="z4"];
+  n89 [label="5"];
+  n90 [label="ASSIGN"];
+  n90 [label="ASSIGN"];
+  n91 [label="z4"];
+  n92 [label="3"];
 
   n0 -> n1 // "program" -> "Test7"
   n0 -> n2 // "program" -> "DECLARE"
   n2 -> n3 // "DECLARE" -> "read"
-  n2 -> n4 // "DECLARE" -> "x"
-  n2 -> n5 // "DECLARE" -> "int"
-  n0 -> n6 // "program" -> "DECLARE"
-  n6 -> n7 // "DECLARE" -> "print"
-  n6 -> n8 // "DECLARE" -> "y"
-  n6 -> n9 // "DECLARE" -> "float"
-  n0 -> n10 // "program" -> "DECLARE"
-  n10 -> n11 // "DECLARE" -> "print"
-  n10 -> n12 // "DECLARE" -> "z1"
-  n10 -> n13 // "DECLARE" -> "float"
-  n0 -> n14 // "program" -> "DECLARE"
-  n14 -> n15 // "DECLARE" -> "print"
-  n14 -> n16 // "DECLARE" -> "z2"
-  n14 -> n17 // "DECLARE" -> "float"
-  n0 -> n18 // "program" -> "DECLARE"
-  n18 -> n19 // "DECLARE" -> "print"
-  n18 -> n20 // "DECLARE" -> "z3"
-  n18 -> n21 // "DECLARE" -> "float"
-  n0 -> n22 // "program" -> "DECLARE"
-  n22 -> n23 // "DECLARE" -> "i"
-  n22 -> n24 // "DECLARE" -> "int"
-  n0 -> n25 // "program" -> "BLOCK"
-  n25 -> n26 // "BLOCK" -> "ASSIGN"
-  n26 -> n27 // "ASSIGN" -> "x"
-  n26 -> n28 // "ASSIGN" -> "+"
-  n28 -> n29 // "+" -> "3"
-  n28 -> n30 // "+" -> "4"
-  n25 -> n31 // "BLOCK" -> "ASSIGN"
-  n31 -> n32 // "ASSIGN" -> "y"
-  n31 -> n33 // "ASSIGN" -> "+"
-  n33 -> n34 // "+" -> "x"
-  n33 -> n35 // "+" -> "2"
-  n25 -> n36 // "BLOCK" -> "ASSIGN"
-  n36 -> n37 // "ASSIGN" -> "y"
-  n36 -> n38 // "ASSIGN" -> "*"
-  n38 -> n39 // "*" -> "2"
-  n38 -> n40 // "*" -> "y"
-  n25 -> n41 // "BLOCK" -> "for"
-  n41 -> n42 // "for" -> "ASSIGN"
-  n42 -> n43 // "ASSIGN" -> "i"
-  n42 -> n44 // "ASSIGN" -> "x"
-  n41 -> n45 // "for" -> "<"
-  n45 -> n46 // "<" -> "i"
-  n45 -> n47 // "<" -> "20"
-  n41 -> n48 // "for" -> "ASSIGN"
-  n48 -> n49 // "ASSIGN" -> "i"
-  n48 -> n50 // "ASSIGN" -> "+"
-  n50 -> n51 // "+" -> "i"
-  n50 -> n52 // "+" -> "1"
-  n41 -> n53 // "for" -> "BLOCK"
-  n53 -> n54 // "BLOCK" -> "ASSIGN"
-  n54 -> n55 // "ASSIGN" -> "z1"
-  n54 -> n56 // "ASSIGN" -> "+"
-  n56 -> n57 // "+" -> "y"
-  n56 -> n58 // "+" -> "1"
-  n25 -> n59 // "BLOCK" -> "if"
-  n59 -> n60 // "if" -> "<"
-  n60 -> n61 // "<" -> "x"
-  n60 -> n62 // "<" -> "2"
-  n59 -> n63 // "if" -> "if"
-  n63 -> n64 // "if" -> "<"
-  n64 -> n65 // "<" -> "x"
-  n64 -> n66 // "<" -> "1"
-  n63 -> n67 // "if" -> "if"
-  n67 -> n68 // "if" -> "<"
-  n68 -> n69 // "<" -> "x"
-  n68 -> n70 // "<" -> "0"
-  n67 -> n71 // "if" -> "ASSIGN"
-  n71 -> n72 // "ASSIGN" -> "x"
-  n71 -> n73 // "ASSIGN" -> "3"
-  n67 -> n74 // "if" -> "ASSIGN"
-  n74 -> n75 // "ASSIGN" -> "x"
-  n74 -> n76 // "ASSIGN" -> "4"
-  n25 -> n77 // "BLOCK" -> "ASSIGN"
-  n77 -> n78 // "ASSIGN" -> "z2"
-  n77 -> n79 // "ASSIGN" -> "+"
-  n79 -> n80 // "+" -> "x"
-  n79 -> n81 // "+" -> "3"
-  n25 -> n82 // "BLOCK" -> "ASSIGN"
-  n82 -> n83 // "ASSIGN" -> "undefined"
-  n82 -> n84 // "ASSIGN" -> "4"
-  n25 -> n85 // "BLOCK" -> "if"
-  n85 -> n86 // "if" -> "<"
-  n86 -> n87 // "<" -> "z4"
-  n86 -> n88 // "<" -> "5"
-  n85 -> n89 // "if" -> "ASSIGN"
-  n89 -> n90 // "ASSIGN" -> "z4"
-  n89 -> n91 // "ASSIGN" -> "3"
+  n2 -> n4 // "DECLARE" -> "print"
+  n2 -> n5 // "DECLARE" -> "x"
+  n2 -> n6 // "DECLARE" -> "int"
+  n0 -> n7 // "program" -> "DECLARE"
+  n7 -> n8 // "DECLARE" -> "print"
+  n7 -> n9 // "DECLARE" -> "y"
+  n7 -> n10 // "DECLARE" -> "float"
+  n0 -> n11 // "program" -> "DECLARE"
+  n11 -> n12 // "DECLARE" -> "print"
+  n11 -> n13 // "DECLARE" -> "z1"
+  n11 -> n14 // "DECLARE" -> "float"
+  n0 -> n15 // "program" -> "DECLARE"
+  n15 -> n16 // "DECLARE" -> "print"
+  n15 -> n17 // "DECLARE" -> "z2"
+  n15 -> n18 // "DECLARE" -> "float"
+  n0 -> n19 // "program" -> "DECLARE"
+  n19 -> n20 // "DECLARE" -> "print"
+  n19 -> n21 // "DECLARE" -> "z3"
+  n19 -> n22 // "DECLARE" -> "float"
+  n0 -> n23 // "program" -> "DECLARE"
+  n23 -> n24 // "DECLARE" -> "i"
+  n23 -> n25 // "DECLARE" -> "int"
+  n0 -> n26 // "program" -> "BLOCK"
+  n26 -> n27 // "BLOCK" -> "ASSIGN"
+  n27 -> n28 // "ASSIGN" -> "x"
+  n27 -> n29 // "ASSIGN" -> "+"
+  n29 -> n30 // "+" -> "3"
+  n29 -> n31 // "+" -> "4"
+  n26 -> n32 // "BLOCK" -> "ASSIGN"
+  n32 -> n33 // "ASSIGN" -> "y"
+  n32 -> n34 // "ASSIGN" -> "+"
+  n34 -> n35 // "+" -> "x"
+  n34 -> n36 // "+" -> "2"
+  n26 -> n37 // "BLOCK" -> "ASSIGN"
+  n37 -> n38 // "ASSIGN" -> "y"
+  n37 -> n39 // "ASSIGN" -> "*"
+  n39 -> n40 // "*" -> "2"
+  n39 -> n41 // "*" -> "y"
+  n26 -> n42 // "BLOCK" -> "for"
+  n42 -> n43 // "for" -> "ASSIGN"
+  n43 -> n44 // "ASSIGN" -> "i"
+  n43 -> n45 // "ASSIGN" -> "x"
+  n42 -> n46 // "for" -> "<"
+  n46 -> n47 // "<" -> "i"
+  n46 -> n48 // "<" -> "20"
+  n42 -> n49 // "for" -> "ASSIGN"
+  n49 -> n50 // "ASSIGN" -> "i"
+  n49 -> n51 // "ASSIGN" -> "+"
+  n51 -> n52 // "+" -> "i"
+  n51 -> n53 // "+" -> "1"
+  n42 -> n54 // "for" -> "BLOCK"
+  n54 -> n55 // "BLOCK" -> "ASSIGN"
+  n55 -> n56 // "ASSIGN" -> "z1"
+  n55 -> n57 // "ASSIGN" -> "+"
+  n57 -> n58 // "+" -> "y"
+  n57 -> n59 // "+" -> "1"
+  n26 -> n60 // "BLOCK" -> "if"
+  n60 -> n61 // "if" -> "<"
+  n61 -> n62 // "<" -> "x"
+  n61 -> n63 // "<" -> "2"
+  n60 -> n64 // "if" -> "if"
+  n64 -> n65 // "if" -> "<"
+  n65 -> n66 // "<" -> "x"
+  n65 -> n67 // "<" -> "1"
+  n64 -> n68 // "if" -> "if"
+  n68 -> n69 // "if" -> "<"
+  n69 -> n70 // "<" -> "x"
+  n69 -> n71 // "<" -> "0"
+  n68 -> n72 // "if" -> "ASSIGN"
+  n72 -> n73 // "ASSIGN" -> "x"
+  n72 -> n74 // "ASSIGN" -> "3"
+  n68 -> n75 // "if" -> "ASSIGN"
+  n75 -> n76 // "ASSIGN" -> "x"
+  n75 -> n77 // "ASSIGN" -> "4"
+  n26 -> n78 // "BLOCK" -> "ASSIGN"
+  n78 -> n79 // "ASSIGN" -> "z2"
+  n78 -> n80 // "ASSIGN" -> "+"
+  n80 -> n81 // "+" -> "x"
+  n80 -> n82 // "+" -> "3"
+  n26 -> n83 // "BLOCK" -> "ASSIGN"
+  n83 -> n84 // "ASSIGN" -> "undefined"
+  n83 -> n85 // "ASSIGN" -> "4"
+  n26 -> n86 // "BLOCK" -> "if"
+  n86 -> n87 // "if" -> "<"
+  n87 -> n88 // "<" -> "z4"
+  n87 -> n89 // "<" -> "5"
+  n86 -> n90 // "if" -> "ASSIGN"
+  n90 -> n91 // "ASSIGN" -> "z4"
+  n90 -> n92 // "ASSIGN" -> "3"
 
 }

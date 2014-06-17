@@ -1,5 +1,5 @@
 program Test7;
-	read  x : int;
+	read print  x : int;
 	print y : float;
 	print z1 : float;
 	print z2 : float;
