@@ -5,6 +5,7 @@ options {
   output = AST;
   tokenVocab = X;
   ASTLabelType = CommonTree;
+  TokenLabelType = XToken;
 }
 
 @header {package dhbw.compilerbau.xparser;

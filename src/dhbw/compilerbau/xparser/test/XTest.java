@@ -16,6 +16,7 @@ import org.antlr.runtime.tree.DOTTreeGenerator;
 
 import dhbw.compilerbau.xparser.XLexer;
 import dhbw.compilerbau.xparser.XParser;
+import dhbw.compilerbau.xparser.XTokenStream;
 import dhbw.compilerbau.xparser.X_Java_Code_Transformation;
 import dhbw.compilerbau.xparser.X_Variable_Declaration;
 import dhbw.compilerbau.xparser.XParser.program_return;
@@ -39,7 +40,9 @@ public class XTest {
 			XLexer lexer = new XLexer(inputStream);
 			
 			//Buffer for tokens
-			CommonTokenStream tokens = new CommonTokenStream(lexer);
+			//CommonTokenStream tokens = new CommonTokenStream(lexer);
+			XTokenStream tokens = new XTokenStream(lexer);
+			
 			
 			//create parser
 			XParser parser = new XParser(tokens);
@@ -100,13 +103,18 @@ public class XTest {
         	X_Variable_Declaration decl = new X_Variable_Declaration(new CommonTreeNodeStream(reference_counter_tree));
         	
         	
+        	//type conversion
+        	
+        	
         	
         	//code transformation
+        	/*
         	X_Java_Code_Transformation transformation = new X_Java_Code_Transformation(new CommonTreeNodeStream(decl.program().getTree()));
         	
         	dhbw.compilerbau.xparser.X_Java_Code_Transformation.program_return code_return =  transformation.program();
         	
         	System.out.println(code_return.getTemplate().toString());
+        	*/
         	
 			
 		}
